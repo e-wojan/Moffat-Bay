@@ -1,17 +1,17 @@
 <?php
 session_start();
 
-$firstName = $_POST['fname'];
-$lastName = $_POST['lname'];
-$email = $_POST['email'];
-$password = $_POST['pass'];
-$phone = $_POST['phone'];
-$addressLine1 = $_POST['address1'];
-$addressLine2 = $_POST['address2'];
-$city = $_POST['city'];
-$state = $_POST['state'];
-$zip = $_POST['zip'];
-$country = $_POST['country'];
+$firstName = isset($_POST['fname']) ? $_POST['fname'] : '';
+$lastName = isset($_POST['lname']) ? $_POST['lname'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$password = isset($_POST['pass']) ? $_POST['pass'] : '';
+$phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+$addressLine1 = isset($_POST['address1']) ? $_POST['address1'] : '';
+$addressLine2 = isset($_POST['address2']) ? $_POST['address2'] : '';
+$city = isset($_POST['city']) ? $_POST['city'] : '';
+$state = isset($_POST['state']) ? $_POST['state'] : '';
+$zip = isset($_POST['zip']) ? $_POST['zip'] : '';
+$country = isset($_POST['country']) ? $_POST['country'] : '';
 
 
 
@@ -38,7 +38,7 @@ if ($conn->connect_error) {
 } else {
     if (isset($_POST['formSubmit'])) {
 
-        $stmt = $conn->prepare("insert into Users(First_Name, Last_Name, Phone, Email, User_Password, Street_Address, Street_Address2, City, State, Zip, Country)
+        $stmt = $conn->prepare("insert into Users(First_Name, Last_Name, Phone, Email, User_Password, Street_Address, Street_Address_2, City, State, Zip, Country)
     values(?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param('sssssssssss', $firstName, $lastName, $phone, $email, $hashed_password, $addressLine2, $addressLine1, $city, $state, $zip, $country);
         $stmt->execute();
