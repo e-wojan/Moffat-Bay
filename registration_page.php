@@ -34,7 +34,7 @@
       <a href="./attractions.html">Attractions</a>
       <a href="./reservationss.html">Reservations</a>
       <a href="./registrations.php" class="active">Registration</a>
-      <div class="navitemlogin"><a href="./login.html">Login</a></div>
+      <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
 
     </div>
   </nav>
