@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 
                 //Store sql password and run hash checker
                 $pass = $user_data['User_Password'];
-                if (password_verify($pass, $password)) {
+                if (password_verify($password, $pass)) {
                     $_SESSION['Email'] = $user_data['Email'];
                     header("Location: index.php");
                     die;
