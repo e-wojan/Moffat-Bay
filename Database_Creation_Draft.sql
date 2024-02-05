@@ -26,7 +26,7 @@ CREATE TABLE Users (
     Last_Name VARCHAR(45) NOT NULL,
     Phone VARCHAR(45) NOT NULL,
     Email VARCHAR(45) NOT NULL,
-    User_Password VARCHAR(45) NOT NULL,
+    User_Password VARCHAR(4000) NOT NULL,
     Street_Address VARCHAR(45) NOT NULL,
     Street_Address_2 VARCHAR(45) NOT NULL,
     City VARCHAR(45) NOT NULL,
