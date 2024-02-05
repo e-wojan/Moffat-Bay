@@ -27,8 +27,8 @@ CREATE TABLE Users (
     Phone VARCHAR(45) NOT NULL,
     Email VARCHAR(45) NOT NULL,
     User_Password VARCHAR(45) NOT NULL,
-    Preferred_Language VARCHAR(45) NOT NULL,
     Street_Address VARCHAR(45) NOT NULL,
+    Street_Address_2 VARCHAR(45) NOT NULL,
     City VARCHAR(45) NOT NULL,
     State VARCHAR(45) NOT NULL,
     Zip VARCHAR(45) NOT NULL,
@@ -50,16 +50,17 @@ CREATE TABLE Reservations (
     Date_of_Check_in DATE NOT NULL,
 	Date_of_Check_out DATE NOT NULl,
     Reservation_Status VARCHAR(45),
+    Special_Requests VARCHAR(200),
     Room_ID INT NOT NULL,
     User_ID INT NOT NULL,
     Foreign KEY (Room_ID) REFERENCES Rooms(Room_ID),
     Foreign KEY (User_ID) REFERENCES Users(User_ID)
     );
 
-INSERT INTO Users (User_ID, First_Name, Last_Name, Phone, Email, User_Password, Preferred_Language, Street_Address, City, State, Zip, Country)
-VALUES (0001, 'Allison', 'Rico', '281-228-5548', 'a.rico@gmail.com',  'gh2inszlVSKI!!', 'English', '5241 Rose Wood Ln.', 'Chicago', 'Illinois', 88548, 'USA'),
-       (0002, 'Rachel', 'Meyers', '834-445-6584', 'rachel.meyers@yahoo.com', 'asdj!jkloj3392k2kjh', 'English', '81 Clarence Gardens', 'London', 'N/A', 'NW1 3LL', 'UK'),
-	   (0003, 'Henry', 'Smith', '155-456-4562', '.Smith1@gmail.com', 'jsm1th123', 'Spanish', '2417 Elm Wood Rd.', 'El Paso', 'Texas', '85843', 'USA');
+INSERT INTO Users (User_ID, First_Name, Last_Name, Phone, Email, User_Password, Street_Address, Street_Address_2, City, State, Zip, Country)
+VALUES (0001, 'Allison', 'Rico', '281-228-5548', 'a.rico@gmail.com',  'gh2inszlVSKI!!', '5241 Rose Wood Ln.', '','Chicago', 'Illinois', 88548, 'USA'),
+       (0002, 'Rachel', 'Meyers', '834-445-6584', 'rachel.meyers@yahoo.com', 'asdj!jkloj3392k2kjh', '81 Clarence Gardens', '', 'London', '', 'NW1 3LL', 'UK'),
+	   (0003, 'Henry', 'Smith', '155-456-4562', '.Smith1@gmail.com', 'jsm1th123', '2417 Elm Wood Rd.', 'Apt 202', 'El Paso', 'Texas', '85843', 'USA');
        
 INSERT INTO Rooms (Room_ID, Room_Type, Availability, Rate)
 VALUES	(101, 'Double', FALSE, '120.00'),
@@ -71,7 +72,7 @@ VALUES	(101, 'Double', FALSE, '120.00'),
         (107, 'Double', TRUE, '120.00'),
 		(108, 'Queen', TRUE, '130.00');
 
-INSERT INTO Reservations (Confirmation_Number, Total_Guests, Date_of_Check_in, Date_of_Check_out, Reservation_Status, Room_ID, User_ID)
-VALUES (12351, 4, '2024-02-21', '2024-02-24', 'Confirmed', 101, 0001),
-	   (12352, 2, '2024-02-08', '2024-02-09', 'Confirmed', 102, 0002),
-       (12353, 1, '2024-03-01', '2024-03-05', 'Confirmed', 103, 0003);
+INSERT INTO Reservations (Confirmation_Number, Total_Guests, Date_of_Check_in, Date_of_Check_out, Reservation_Status, Special_Requests, Room_ID, User_ID)
+VALUES (12351, 4, '2024-02-21', '2024-02-24', 'Confirmed', '', 101, 0001),
+	   (12352, 2, '2024-02-08', '2024-02-09', 'Confirmed', '', 102, 0002),
+       (12353, 1, '2024-03-01', '2024-03-05', 'Confirmed', 'Would prefer ADA room, if poossible.', 103, 0003);
