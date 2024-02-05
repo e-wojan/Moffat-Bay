@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CSD460 Moffat Bay Lodge Landing Page</title>
+</head>
+<script>
+
+</script>
+
+<body>
+    <?php 
+    session_start();
+    
+    ?>
+    <nav>
+        <!--logo-->
+        <!--top navigation bar-->
+        <div class="navigation">
+
+            <a href="./index.php" class="active">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./attractions.html">Attractions</a>
+            <a href="./reservations.html">Reservations</a>
+            <a href="registration_page.php">Registration</a>
+            <div class="navitemlogin"><a href="./Login_Page.php">Login</a></div>
+
+            <div class="username">
+            <?php
+            if (isset($_SESSION['Email'])) {
+
+            ?>
+            <div class="" role="">Hello, 
+                <?php echo $_SESSION['Email']."!"; ?>
+            </div>
+            <?php
+            }
+            ?>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="landingtopbannerimgcontainer">
+        <div class="landingtopbannertexttitle">
+            Moffat Bay Lodge
+            <br>
+        </div>
+        <div class="centeredtextlanding">Welcome! Your adventure starts here.
+            <br>
+            Start exploring for your next adventure.
+            <a href="./about.html">Start Here</a>
+
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <p>This website was created as a class assignment
+            <br>
+            CSD460 Capstone in Software Development Project - Group B
+            <br>
+            Bellevue University
+        </p>
+
+    </div>
+</body>
+
+</html>

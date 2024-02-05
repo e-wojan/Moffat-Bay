@@ -400,6 +400,13 @@ font-size: calc(1.325rem + .9vw);
   border-radius: 0.5rem;
 }
 
+.username{
+  position: absolute;
+  color: white;
+  right: 5px;
+  top: 15px;
+}
+
 
 
 
