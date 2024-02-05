@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <a href="./contact.html">Contact Us</a>
             <a href="./attractions.html">Attractions</a>
             <a href="./reservationss.html">Reservations</a>
+            <a href="registration_page.php">Registration</a>
             <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div>
 
         </div>
