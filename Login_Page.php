@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <!--top navigation bar-->
         <div class="navigation">
 
-            <a href="./index.html">Home</a>
+            <a href="./index.php">Home</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact Us</a>
             <a href="./attractions.html">Attractions</a>
