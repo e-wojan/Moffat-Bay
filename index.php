@@ -72,17 +72,17 @@
     </nav>
 
 
-    <div class="landingtopbannerimgcontainer">
-        <div class="landingtopbannertexttitle">
-            Moffat Bay Lodge
-            <br>
-        </div>
-        <div class="centeredtextlanding">Welcome! Your adventure starts here.
-            <br>
-            Start exploring for your next adventure.
-            <a href="./about.html">Start Here</a>
-
-        </div>
+    <div class="landing-backgroundimage">
+      <div class="landingtopbannertexttitle">
+        Moffat Bay Lodge
+        <br />
+      </div>
+      <div class="centeredtextlanding">
+        Welcome! Your adventure starts here.
+        <br />
+        Start exploring for your next adventure.
+        <a href="./about.php">Start Here</a>
+      </div>
     </div>
 
 
