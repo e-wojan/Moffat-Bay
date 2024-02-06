@@ -22,9 +22,9 @@
         <div class="navigation">
 
             <a href="./index.php">Home</a>
-            <a href="./about.html">About</a>
-            <a href="./contact.html">Contact Us</a>
-            <a href="./attractions.html">Attractions</a>
+            <a href="./about.php">About</a>
+            <a href="./contact.php">Contact Us</a>
+            <a href="./attractions.php">Attractions</a>
             <a href="./reservationss.html">Reservations</a>
             <a href="registration_page.php">Registration</a>
             <?php
@@ -72,17 +72,17 @@
     </nav>
 
     <!--Moffat Bay Banner and Title-->
-    <div class="container">
+
         <div class="bannerimg">
             <p>Moffat Bay Lodge</p>
         </div>
-
+    <div class="container">
         <!--Login Box-->
         <!--NOTES FOR RACHEL. I am struggling with getting the CSS to work with this.-->
         <div class="bodyinformation">
             <div class="box">
                 <form method="post" action="Loginfunction.php">
-                    <div style="font-size: 40px;">Login Now</div><br>
+                    <div style="font-size: 40px; text-align: center;">Login Now</div><br>
                     <?php
                     if (isset($_SESSION['LoginError'])) {
 
@@ -95,7 +95,7 @@
                         unset($_SESSION['LoginError']);
                     }
                     ?>
-
+<div class="centerloginfields">
                     <label for="fname">Enter Your Email Address:</label><br>
                     <input type="text" name="user_name" class="registrationinput"><br><br>
 
@@ -108,7 +108,7 @@
                 </form>
             </div>
         </div>
-
+</div>
         <!--Bottom of Screen Color-->
         <div class="footer">
 
