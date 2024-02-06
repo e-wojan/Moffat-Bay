@@ -12,8 +12,8 @@ include("functions.php");
 
     //If statements checks to ensure login button posts data
     //Posted variables are stored
-    $user_name = $_POST['user_name'];
-    $password = $_POST['password'];
+    $user_name = isset($_POST['user_name']) ? $_POST['user_name'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
 
     if (!empty($user_name) && !empty($password)) {
         //Confirms posted data is not blank/null
