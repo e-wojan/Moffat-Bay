@@ -44,7 +44,12 @@
   font-weight: bold;
 
 }
-
+.landing-backgroundimage {
+  background-image: url("../images/lodgesceneview2.jpg");
+  background-size: cover; /* shows full image in complete space*/
+  background-repeat: no-repeat; /*image doesn't repeat*/
+  height: 100vh; /*view point, responsive height*/
+}
 
 .landingtopbannerimgcontainer{
 background-image:url('../images/lodgesceneview.jpg') ;
