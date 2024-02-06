@@ -40,7 +40,7 @@ if ($conn->connect_error) {
 
         $stmt = $conn->prepare("insert into Users(First_Name, Last_Name, Phone, Email, User_Password, Street_Address, Street_Address_2, City, State, Zip, Country)
     values(?,?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param('sssssssssss', $firstName, $lastName, $phone, $email, $hashed_password, $addressLine2, $addressLine1, $city, $state, $zip, $country);
+        $stmt->bind_param('sssssssssss', $firstName, $lastName, $phone, $email, $hashed_password, $addressLine1, $addressLine2, $city, $state, $zip, $country);
         $stmt->execute();
         $success = 1;
         $_SESSION['status'] = "Registration Successful!";
