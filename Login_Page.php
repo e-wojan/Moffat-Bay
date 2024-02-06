@@ -97,12 +97,12 @@
                     ?>
 
                     <label for="fname">Enter Your Email Address:</label><br>
-                    <input type="text" name="user_name" size="50"><br><br>
+                    <input type="text" name="user_name" class="registrationinput"><br><br>
 
                     <label for="fname">Enter Your Password:</label><br>
-                    <input type="password" name="password" size="50"><br><br>
+                    <input type="password" name="password" class="registrationinput"><br><br>
 
-                    <input type="submit" value="Login"><br><br>
+                    <input class="btn" type="submit" value="Login"><br><br>
 
                     <a href="register_page.php">Signup</a>
                 </form>

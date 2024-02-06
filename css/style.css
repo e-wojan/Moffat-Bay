@@ -261,7 +261,7 @@ grid-row-end: 5;
 } 
 
 
-#register{
+.btn{
 background-color: #466a72;
 border: #466a72;
 padding: 0.375rem 0.75rem;
@@ -277,7 +277,7 @@ color: white;
 border-radius: 5rem;
 }
 
-#register:hover{
+.btn:hover{
 opacity: 0.8;
 cursor: pointer;
 }
