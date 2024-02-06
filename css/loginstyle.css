@@ -1,0 +1,147 @@
+/* images from stock images https://www.pexels.com/ */
+* {
+  /*overrall page styles*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation {
+  overflow: hidden;
+  background-color: #466a72;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 0 10px 5px gray;
+  height: 50px;
+}
+
+.navigation a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  background: #ddd;
+  color: black;
+  border-radius: 40px;
+  font-weight: bold;
+}
+/* Add a color to the active/current link */
+.navigation a.active {
+  background-color: white;
+  color: black;
+  border-radius: 40px;
+  text-shadow: 4px 4px 8px #727171;
+  font-weight: bold;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 75px;
+  background-color: #466a72;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.footer p {
+  font-family: monospace;
+}
+
+.bannerimg {
+  /* banner image under navigation*/
+  height: 300px;
+
+  margin-top: 30px;
+  padding-top: 100px;
+
+  background-image: url("../images/lodgesceneviewheaderbanner.jpg");
+  background-repeat: no-repeat; /*image only appears once in div*/
+  background-position: center; /*center image in middle of div*/
+  background-size: cover; /*fill background image in div*/
+}
+.bannerimg p {
+  font-size: 100px;
+
+  margin-left: 50px;
+
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.bodyinformation {
+  background-color: lightgrey;
+  width: auto;
+  border: 15px solid #466a72;
+  padding: 20px;
+  margin: 20px;
+  height: fit-content;
+
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+  margin-bottom: 85px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  font-size: calc(1.325rem + 0.9vw);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.username {
+  position: absolute;
+  color: white;
+  right: 5px;
+  top: 15px;
+}
+
+.logintextcenterofpage {
+  font-size: 60px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bolder;
+}
+.container {
+  display: grid;
+  column-gap: 25px;
+  padding-top: 25px;
+  padding-right: 5%;
+  padding-left: 5%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+input {
+  display: block;
+  /* border: 2px solid #ccc;*/
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+label {
+  font-size: 30px;
+  padding: 10px;
+  font-weight: bolder;
+}
+.signupnow {
+  text-align: center;
+  font-size: 40px;
+}
