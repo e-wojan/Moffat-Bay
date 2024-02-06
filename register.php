@@ -25,7 +25,7 @@ $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 // ini_set('display_errors', 1);
 
 //Database Connection
-$success = 0;
+
 $host = 'localhost';
 $username = 'moffat_user';
 $sqlpassword = 'groupb';

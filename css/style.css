@@ -400,6 +400,16 @@ font-size: calc(1.325rem + .9vw);
   border-radius: 0.5rem;
 }
 
+.alertstatus{
+  padding: 1rem 1rem;
+  text-emphasis: #58151c;
+  border-color: #f1aeb5;
+  color: #58151c;
+  position: relative;
+  background-color: #f8d7da;
+  border-radius: 0.5rem;
+}
+
 .username{
   position: absolute;
   color: white;

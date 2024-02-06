@@ -34,7 +34,33 @@
       <a href="./attractions.html">Attractions</a>
       <a href="./reservationss.html">Reservations</a>
       <a href="./registrations.php" class="active">Registration</a>
-      <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
+      <?php
+            if (isset($_SESSION['Email'])) {
+
+                ?>
+                <div class="navitemlogin"><a href="Logout.php">Logout</a></div>
+                <?php
+            } else {
+                ?>
+                <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
+                <?php
+            }
+            ?>
+
+
+            <!-- <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div> -->
+            <div class="username">
+                <?php
+                if (isset($_SESSION['Email'])) {
+
+                    ?>
+                    <div class="" role="">Hello,
+                        <?php echo $_SESSION['Email'] . "!"; ?>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
 
       <div class="username">
             <?php

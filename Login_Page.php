@@ -1,46 +1,3 @@
-<?php
-//------------------SESSION CODE TO CHECK LOGIN------------------
-session_start();
-
-
-//Connects these files so they can call variables established here
-include("connection.php");
-include("functions.php");
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    //If statements checks to ensure login button posts data
-    //Posted variables are stored
-    $user_name = $_POST['user_name'];
-    $password = $_POST['password'];
-
-    if (!empty($user_name) && !empty($password)) {
-        //Confirms posted data is not blank/null
-        $query = "select * from Users where Email = '$user_name' limit 1";
-        //mysqli uses the sql connector (con) to implement $query and ensure a match occurs
-        $result = mysqli_query($con, $query);
-
-        if ($result) {
-            //If the entered email and sql email match, check to ensure the sql row for the entry exists
-            //finally, store the row of user data within $user_data
-            if ($result && mysqli_num_rows($result) > 0) {
-                $user_data = mysqli_fetch_assoc($result);
-                
-                //Store sql password and run hash checker
-                $pass = $user_data['User_Password'];
-                if (password_verify($password, $pass)) {
-                    $_SESSION['Email'] = $user_data['Email'];
-                    header("Location: index.php");
-                    die;
-                }
-            }
-        }
-        //an error message needs to be written here -----!!!!EMPTY AREA, STILL NEEDS TO BE CODED!!!!-----
-    } else {
-        //an error message needs to be written here -----!!!!EMPTY AREA, STILL NEEDS TO BE CODED!!!!-----
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,6 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 </script>
 
 <body>
+<?php 
+    session_start();
+    include "Loginfunction.php";
+    ?>
     <nav>
         <!--logo-->
         <!--top navigation bar-->
@@ -66,7 +27,33 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <a href="./attractions.html">Attractions</a>
             <a href="./reservationss.html">Reservations</a>
             <a href="registration_page.php">Registration</a>
-            <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div>
+            <?php
+            if (isset($_SESSION['Email'])) {
+
+                ?>
+                <div class="navitemlogin"><a href="Logout.php" class="active">Logout</a></div>
+                <?php
+            } else {
+                ?>
+                <div class="navitemlogin"><a href="Login_Page.php" class="active">Login</a></div>
+                <?php
+            }
+            ?>
+
+
+            <!-- <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div> -->
+            <div class="username">
+                <?php
+                if (isset($_SESSION['Email'])) {
+
+                    ?>
+                    <div class="" role="">Hello,
+                        <?php echo $_SESSION['Email'] . "!"; ?>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
 
             <div class="username">
             <?php
@@ -94,8 +81,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <!--NOTES FOR RACHEL. I am struggling with getting the CSS to work with this.-->
         <div class="bodyinformation">
             <div class="box">
-                <form method="post">
+                <form method="post" action="Loginfunction.php">
                     <div style="font-size: 40px;">Login Now</div><br>
+                    <?php
+                    if (isset($_SESSION['LoginError'])) {
+
+                        ?>
+                        <div class="alertstatus" role="alert">
+                            <?php echo $_SESSION['LoginError']; ?>
+                        </div>
+                        <?php
+
+                        unset($_SESSION['LoginError']);
+                    }
+                    ?>
 
                     <label for="fname">Enter Your Email Address:</label><br>
                     <input type="text" name="user_name" size="50"><br><br>
