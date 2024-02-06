@@ -378,7 +378,7 @@ h2 {
   right: 5px;
   top: 15px;
 }
-.logincontainer {
+/*.logincontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,4 +387,14 @@ h2 {
   font-size: 40px;
   text-align: center;
   margin-bottom: 40px;
+}*/
+
+.alertstatus{
+  padding: 1rem 1rem;
+  text-emphasis: #58151c;
+  border-color: #f1aeb5;
+  color: #58151c;
+  position: relative;
+  background-color: #f8d7da;
+  border-radius: 0.5rem;
 }
