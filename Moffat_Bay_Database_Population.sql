@@ -12,9 +12,9 @@ Database Population for the Moffat Bay Lodge Capstone Project.
 USE MoffatBay_Lodge;
 
 INSERT INTO Users (User_ID, First_Name, Last_Name, Phone, Email, User_Password, Street_Address, Street_Address_2, City, State, Zip, Country)
-VALUES (0001, 'Allison', 'Rico', '281-228-5548', 'a.rico@gmail.com',  'gh2inszlVSKI!!', '5241 Rose Wood Ln.', '','Chicago', 'Illinois', 88548, 'USA'),
-       (0002, 'Rachel', 'Meyers', '834-445-6584', 'rachel.meyers@yahoo.com', 'asdj!jkloj3392k2kjh', '81 Clarence Gardens', '', 'London', '', 'NW1 3LL', 'UK'),
-	   (0003, 'Henry', 'Smith', '155-456-4562', 'H.Smith1@gmail.com', 'jsm1th123', '2417 Elm Wood Rd.', 'Apt 202', 'El Paso', 'Texas', '85843', 'USA');
+VALUES (0001, 'Allison', 'Rico', '281-228-5548', 'a.rico@gmail.com',  '$2y$10$5GM1cELZXSO.AnI/jJwICOcZFxRjKIgqq6R2WaqTHGEqv5jt96p/u', '5241 Rose Wood Ln.', '','Chicago', 'Illinois', 88548, 'USA'),
+       (0002, 'Rachel', 'Meyers', '834-445-6584', 'rachel.meyers@yahoo.com', '$2y$10$SQD5vTid1QxvYy6tejBTZ.lzfyPqGxF8DH264BcCSNTHGCD9C8jWa', '81 Clarence Gardens', '', 'London', '', 'NW1 3LL', 'UK'),
+	   (0003, 'Henry', 'Smith', '155-456-4562', 'H.Smith1@gmail.com', '$2y$10$7U7PjPkLw1Bmqh/vEOjyV.wjzfvqExgmx5zjI0XdJraUeAwHLZFZC', '2417 Elm Wood Rd.', 'Apt 202', 'El Paso', 'Texas', '85843', 'USA');
        
 INSERT INTO Rooms (Room_ID, Room_Type, Availability, Rate)
 VALUES	(101, 'Double', FALSE, '120.00'),
