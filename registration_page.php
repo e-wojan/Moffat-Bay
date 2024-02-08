@@ -32,7 +32,7 @@
       <a href="./about.html">About</a>
       <a href="./contact.html">Contact Us</a>
       <a href="./attractions.html">Attractions</a>
-      <a href="./reservationss.html">Reservations</a>
+      <a href="./reservations.php">Reservations</a>
       <a href="./registrations.php" class="active">Registration</a>
       <?php
             if (isset($_SESSION['Email'])) {
