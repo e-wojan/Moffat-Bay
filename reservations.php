@@ -217,7 +217,7 @@
                         </div>
                         <div class="bedroominfo">
                             <label for="room">Double Queen Bed</label>
-                            <input type="radio" name="room" value="104"><br>
+                            <input type="radio" name="room" value="103"><br>
                             <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                         </div>
                     </div>
@@ -237,7 +237,7 @@
                         </div>
                         <div class="bedroominfo">
                             <label for="room">King Bed</label>
-                            <input type="radio" name="room" value="103"><br>
+                            <input type="radio" name="room" value="104"><br>
                             <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                         </div>
                     </div>
