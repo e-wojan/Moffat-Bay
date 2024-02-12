@@ -166,7 +166,7 @@
                 </div>
                
                 <div class="bedroominfo">
-                    <label for="room">Double Bed 1</label>
+                    <label for="room">Double Bed</label>
                     <input type="radio" name="room" value="101"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
@@ -199,7 +199,7 @@
                     <img src="images/QueenBed.jpg" alt="Queen Bed">
                 </div>
                 <div class="bedroominfo">
-                    <label for="room">Queen Bed 1</label>
+                    <label for="room">Queen Bed</label>
                     <input type="radio" name="room" value="102"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
@@ -229,7 +229,7 @@
                     <img src="images/kingbed.jpg" alt="King Bed">
                 </div>
                 <div class="bedroominfo">
-                    <label for="room">King Bed 1</label>
+                    <label for="room">King Bed</label>
                     <input type="radio" name="room" value="103"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
