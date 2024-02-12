@@ -44,12 +44,7 @@
   font-weight: bold;
 
 }
-.landing-backgroundimage {
-  background-image: url("../images/lodgesceneview2.jpg");
-  background-size: cover; /* shows full image in complete space*/
-  background-repeat: no-repeat; /*image doesn't repeat*/
-  height: 100vh; /*view point, responsive height*/
-}
+
 
 .landingtopbannerimgcontainer{
 background-image:url('../images/lodgesceneview.jpg') ;
@@ -421,14 +416,213 @@ color: white;
 right: 5px;
 top: 15px;
 }
-.centerloginfields {
-  text-align: center;
+
+img{
+background-color: gray;
+width: 200px;
+height: 200px;
+border-radius: 0.5rem;
 }
 
 
+/* [type=radio] { 
+position: absolute;
+opacity: 0;
+width: 0;
+height: 0;
+}
 
 
+[type=radio] + img {
+cursor: pointer;
+}
 
+
+[type=radio]:checked + img {
+outline: 2px solid #f00;
+} */
+
+.flexcontainer{
+display: flex;
+width: 100%;
+justify-content: space-around;
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
+
+.room1{
+flex-basis: 25%;
+}
+
+.room2{
+flex-basis: 25%;
+}
+
+.room3{
+flex-basis: 25%;
+}
+
+.room4{
+flex-basis: 25%;
+}
+
+.reservationinput{
+display: block;
+width: 100%;
+padding: 0.375rem 0.75rem;
+margin: 0;
+font-family: inherit;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #212529;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #dee2e6;
+border-radius: 0.375rem;
+transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.reservationcontainer{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+padding: 3rem;
+}
+
+.rescontainer1{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-between;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+.containeritem{
+flex-basis: 45%;
+}
+
+.rescontainer2{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-between;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+.rescontainer3{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-between;
+padding-top: 1rem;
+padding-bottom: 1rem;
+align-content: space-evenly;
+}
+
+.rescontainer4{
+display: flex;
+justify-content: center;
+padding-top: 1rem;
+padding-bottom: 1rem;
+
+}
+
+#logout{
+
+position: absolute;
+right: 200px;
+top: 1px;
+}
+
+#logout:hover{
+background-color: #466a72;
+}
+
+#logoutlink{
+text-decoration: underline;
+color: lightblue;
+}
+
+.room1{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room2{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room3{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room4{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room5{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room6{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room7{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.room8{
+padding: 15px;
+flex-basis: 25%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.bedroomimage{
+flex-basis: 20%;
+}
+
+.bedroominfo{
+flex-basis: 40%;
+margin-top: auto;
+margin-bottom: auto;
+}
+
+p{
+margin-top: 1rem;
+}
 
 
 

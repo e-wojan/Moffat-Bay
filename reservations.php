@@ -161,37 +161,88 @@
 
           <div class="rescontainer3">
             <div class="room1">
-                <label for="room">Double Bed</label>
-                <input type="radio" name="room" value="101">
+                <div class="bedroomimage">
+                    <img src="images/DoubleBed.jpg" alt="Double Bed">
+                </div>
+               
+                <div class="bedroominfo">
+                    <label for="room">Double Bed 1</label>
+                    <input type="radio" name="room" value="101"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
+                
+                    
             </div>  
-            <div class="room1">
-                <label for="room">Double Bed</label>
-                <input type="radio" name="room" value="105">
+            <div class="room2">
+                <div class="bedroomimage">
+                    <img src="images/DoubleBed.jpg" alt="Double Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">Double Bed 2</label>
+                    <input type="radio" name="room" value="105"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
             </div>  
-            <div class="room1">
-                <label for="room">Double Bed</label>
-                <input type="radio" name="room" value="107">
+            <div class="room3">
+                <div class="bedroomimage">
+                    <img src="images/DoubleBed.jpg" alt="Double Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">Double Bed 3</label>
+                    <input type="radio" name="room" value="107"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
             </div>  
 
-            <div class="room2">
-                <label for="room">Queen Bed</label>
-                <input type="radio" name="room" value="102">
+            <div class="room4">
+                 <div class="bedroomimage">
+                    <img src="images/QueenBed.jpg" alt="Queen Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">Queen Bed 1</label>
+                    <input type="radio" name="room" value="102"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
             </div> 
-            <div class="room2">
-                <label for="room">Queen Bed</label>
-                <input type="radio" name="room" value="104">
+            <div class="room5">
+                 <div class="bedroomimage">
+                    <img src="images/QueenBed.jpg" alt="Queen Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">Queen Bed 2</label>
+                    <input type="radio" name="room" value="104"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>  
             </div> 
-            <div class="room2">
-                <label for="room">Queen Bed</label>
-                <input type="radio" name="room" value="108">
+            <div class="room6">
+                <div class="bedroomimage">
+                    <img src="images/QueenBed.jpg" alt="Queen Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">Queen Bed 3</label>
+                    <input type="radio" name="room" value="108"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
             </div> 
-            <div class="room3">
-                <label for="room">King Bed</label>
-                <input type="radio" name="room" value="103">
+            <div class="room7">
+                 <div class="bedroomimage">
+                    <img src="images/kingbed.jpg" alt="King Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">King Bed 1</label>
+                    <input type="radio" name="room" value="103"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
             </div>  
-            <div class="room3">
-                <label for="room">King Bed</label>
-                <input type="radio" name="room" value="106">
+            <div class="room8">
+                <div class="bedroomimage">
+                    <img src="images/kingbed.jpg" alt="King Bed">
+                </div>
+                <div class="bedroominfo">
+                    <label for="room">King Bed 2</label>
+                    <input type="radio" name="room" value="106"><br>
+                    <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                </div>
             </div>  
 
           </div>
