@@ -147,7 +147,14 @@
           <div class="rescontainer2">
             <div class="mb-3 containeritem">
                 <label for="guests" class="form-label">Number of Guests</label>
-                <input type="number" min="1" class="reservationinput" name="guests" required>
+                <select name="guests" class="reservationinput" required>
+                    <option value="">--- Choose number of Guests ---</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             
         
