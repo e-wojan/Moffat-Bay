@@ -19,7 +19,7 @@ VALUES (0001, 'Allison', 'Rico', '281-228-5548', 'a.rico@gmail.com',  '$2y$10$5G
 INSERT INTO Rooms (Room_ID, Room_Type, Availability, Rate)
 VALUES	(101, 'Double Full', FALSE, '120.00'),
 		(102, 'Queen', FALSE, '140.00'),
-        (103, 'Double Quen', FALSE, '130.00'),
+        (103, 'Double Queen', FALSE, '130.00'),
 		(104, 'King', TRUE, '150.00'),
         (105, 'Double Full', TRUE, '120.00'),
 		(106, 'Queen', TRUE, '140.00'),
