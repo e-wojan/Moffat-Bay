@@ -22,16 +22,30 @@
         <div class="navigation">
 
             <a href="./index.php">Home</a>
-            <a href="./about.php">About</a>
-            <a href="./contact.php">Contact Us</a>
-            <a href="./attractions.php">Attractions</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact Us</a>
+            <a href="./attractions.html">Attractions</a>
             <a href="./reservations.php">Reservations</a>
-            <a href="registration_page.php">Registration</a>
             <?php
             if (isset($_SESSION['Email'])) {
 
                 ?>
-                <div class="navitemlogin"><a href="Logout.php" class="active">Logout</a></div>
+                
+                <a href="">My Reservations</a>
+                
+                
+                <?php
+            } else {
+                ?>
+                <a href="./registration_page.php">Registration</a>
+                <?php
+            }
+            ?>
+            <?php
+            if (isset($_SESSION['Email'])) {
+
+                ?>
+                <div id="logout"><a href="Logout.php" id="logoutlink">Logout</a></div>
                 <?php
             } else {
                 ?>
@@ -72,17 +86,17 @@
     </nav>
 
     <!--Moffat Bay Banner and Title-->
-
+    <div class="container">
         <div class="bannerimg">
             <p>Moffat Bay Lodge</p>
         </div>
-    <div class="container">
+
         <!--Login Box-->
         <!--NOTES FOR RACHEL. I am struggling with getting the CSS to work with this.-->
         <div class="bodyinformation">
             <div class="box">
                 <form method="post" action="Loginfunction.php">
-                    <div style="font-size: 40px; text-align: center;">Login Now</div><br>
+                    <div style="font-size: 40px;">Login Now</div><br>
                     <?php
                     if (isset($_SESSION['LoginError'])) {
 
@@ -97,11 +111,10 @@
                     ?>
 
                     <label for="fname">Enter Your Email Address:</label><br>
-                    <input type="text" name="user_name" class="registrationinput"><br><br>
+                    <input type="text" name="user_name"  class="registrationinput"><br><br>
 
                     <label for="fname">Enter Your Password:</label><br>
                     <input type="password" name="password" class="registrationinput"><br><br>
-                    <div class="centerloginfields">
 
                     <input class="btn" type="submit" value="Login"><br><br>
 
@@ -109,7 +122,7 @@
                 </form>
             </div>
         </div>
-</div>
+
         <!--Bottom of Screen Color-->
         <div class="footer">
 

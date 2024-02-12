@@ -33,12 +33,30 @@
       <a href="./contact.html">Contact Us</a>
       <a href="./attractions.html">Attractions</a>
       <a href="./reservations.php" class="active">Reservations</a>
-      <a href="./registration_page.php">Registration</a>
       <?php
             if (isset($_SESSION['Email'])) {
 
                 ?>
-                <div class="navitemlogin"><a href="Logout.php">Logout</a></div>
+                
+                <a href="">My Reservations</a>
+                
+                
+                <?php
+            } else {
+                ?>
+                <a href="./registration_page.php">Registration</a>
+                <?php
+            }
+            ?>
+      
+      <?php
+            if (isset($_SESSION['Email'])) {
+
+                ?>
+                
+                <div id="logout"><a href="Logout.php" id="logoutlink">Logout</a></div>
+                
+                
                 <?php
             } else {
                 ?>
@@ -91,11 +109,12 @@
   <div class="bodyinformation">
     <h2 id="registrationheader">Book Your Stay</h2>
 
+
     <?php
     if (isset($_SESSION['status'])) {
 
       ?>
-      <div class="successstatus" role="alert">
+      <div class="alertstatus" role="alert">
         <?php echo $_SESSION['status']; ?>
       </div>
       <?php
@@ -108,63 +127,81 @@
 
 
 
-    <form action="register.php" method="post">
-      <div class="container">
+    <form action="book_reservation.php" method="post">
+      <div class="reservationcontainer">
 
         
+          <div class="rescontainer1">
+            <div class="mb-3 containeritem">
+                <label for="checkin" class="form-label flex">Check-In Date</label>
+                <input type="date" class="reservationinput" name="checkin" required>
+            </div>
+            <div class="mb-3 containeritem">
+                <label for="checkout" class="form-label">Check-Out Date</label>
+                <input type="date" class="reservationinput" name="checkout" required>
+            </div>
+          </div>
           
-          <div class="mb-3 flexitems">
-            <label for="checkin" class="form-label flex">Check-In Date</label>
-            <input type="date" class="registrationinput" name="checkin" required>
-          </div>
-          <div class="mb-3 flexitems">
-            <label for="checkout" class="form-label">Check-Out Date</label>
-            <input type="date" class="registrationinput" name="checkout" required>
-          </div>
        
         
-          
-          <div class="mb-3 flexitems">
-            <label for="guests" class="form-label">Number of Guests</label>
-            <input type="number" min="1" class="registrationinput" name="guests" required>
-          </div>
-        
-       
-          <div class="mb-3 flexitems">
-            <label for="specialrequests" class="form-label">Do you have any special requests?</label>
-            <input type="email" class="registrationinput"  name="specialrequests">
+          <div class="rescontainer2">
+            <div class="mb-3 containeritem">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input type="number" min="1" class="reservationinput" name="guests" required>
+            </div>
             
+        
+            <div class="mb-3 containeritem">
+                <label for="specialrequests" class="form-label">Do you have any special requests?</label>
+                <input type="text" class="reservationinput"  name="specialrequests">
+                
+            </div>
           </div>
+          
 
-          <fieldset>
-            <legend>Select your Room Type</legend>
-            <div class="mb-3 flexitems">
-                <label for="specialrequests" class="form-label">Room A</label>
-                <input type="radio" class="registrationinput"  name="specialrequests">
+          <div class="rescontainer3">
+            <div class="room1">
+                <label for="room">Double Bed</label>
+                <input type="radio" name="room" value="101">
+            </div>  
+            <div class="room1">
+                <label for="room">Double Bed</label>
+                <input type="radio" name="room" value="105">
+            </div>  
+            <div class="room1">
+                <label for="room">Double Bed</label>
+                <input type="radio" name="room" value="107">
+            </div>  
+
+            <div class="room2">
+                <label for="room">Queen Bed</label>
+                <input type="radio" name="room" value="102">
+            </div> 
+            <div class="room2">
+                <label for="room">Queen Bed</label>
+                <input type="radio" name="room" value="104">
+            </div> 
+            <div class="room2">
+                <label for="room">Queen Bed</label>
+                <input type="radio" name="room" value="108">
+            </div> 
+            <div class="room3">
+                <label for="room">King Bed</label>
+                <input type="radio" name="room" value="103">
+            </div>  
+            <div class="room3">
+                <label for="room">King Bed</label>
+                <input type="radio" name="room" value="106">
+            </div>  
+
+          </div>
+         
+        <div class="rescontainer4">
+            <div class="griditem6">
+            <input class="btn" type="submit" value="Book" name="bookStay">
             </div>
-            <div class="mb-3 flexitems">
-                <label for="specialrequests" class="form-label">Room B</label>
-                <input type="radio" class="registrationinput"  name="specialrequests">
-            </div>
-            <div class="mb-3 flexitems">
-                <label for="specialrequests" class="form-label">Room C</label>
-                <input type="radio" class="registrationinput"  name="specialrequests">
-            </div>
-            <div class="mb-3 flexitems">
-                <label for="specialrequests" class="form-label">Room D</label>
-                <input type="radio" class="registrationinput"  name="specialrequests">
-            </div>
-
-          </fieldset>
-        
-        
-
-
-
-        <div class="griditem6">
-          <input class="btn" type="submit" value="Book" name="bookStay">
         </div>
-
+       
       </div>
 
 

@@ -31,18 +31,17 @@ include("functions.php");
                 $pass = $user_data['User_Password'];
                 if (password_verify($password, $pass)) {
                     $_SESSION['Email'] = $user_data['Email'];
-                    $_SESSION['User_Id'] = $user_data['User_ID'];
-                    header("Location: index.php");
+                    header("Location: reservations.php");
                     die;
                 } 
                 else{
                     $_SESSION['LoginError'] = "Sorry, that username or password doesn't exist. Please try again.";
-                header("Location: Login_Page.php");
+                header("Location: Reservation_Login.php");
                 }
             } 
             else{
                 $_SESSION['LoginError'] = "Sorry, that username or password doesn't exist. Please try again.";
-                header("Location: Login_Page.php");
+                header("Location: Reservation_Login.php");
             }
             
 

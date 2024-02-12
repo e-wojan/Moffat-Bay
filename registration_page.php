@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 
-  <title>CSD460 Moffat Bay Lodge Registration Page</title>
+  <title>CSD460 Moffat Bay Lodge Landing Page</title>
 </head>
 
 <script>
@@ -33,12 +33,12 @@
       <a href="./contact.html">Contact Us</a>
       <a href="./attractions.html">Attractions</a>
       <a href="./reservations.php">Reservations</a>
-      <a href="./registrations.php" class="active">Registration</a>
+      <a href="./registration_page.php" class="active">Registration</a>
       <?php
             if (isset($_SESSION['Email'])) {
 
                 ?>
-                <div class="navitemlogin"><a href="Logout.php">Logout</a></div>
+                <div id="logout"><a href="Logout.php" id="logoutlink">Logout</a></div>
                 <?php
             } else {
                 ?>
@@ -81,9 +81,9 @@
 
 
 
-    <!--<div class="container">
+  <div class="container">
 
-  </div> container-->
+  </div> <!--container-->
   <div class="bannerimg">
     <p>Moffat Bay Lodge</p>
   </div>

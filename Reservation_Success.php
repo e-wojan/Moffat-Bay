@@ -5,27 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>CSD460 Moffat Bay Lodge Landing Page</title>
+    <title>CSD460 Moffat Bay Lodge Login Page</title>
 </head>
 <script>
 
 </script>
 
 <body>
-    <?php 
+<?php 
     session_start();
-    
+    include "Loginfunction.php";
     ?>
     <nav>
         <!--logo-->
         <!--top navigation bar-->
         <div class="navigation">
 
-            <a href="./index.php" class="active">Home</a>
+            <a href="./index.php">Home</a>
             <a href="./about.html">About</a>
             <a href="./contact.html">Contact Us</a>
             <a href="./attractions.html">Attractions</a>
-            <a href="./reservations.php">Reservations</a>
+            <a href="./reservations.php" class="active">Reservations</a>
             <?php
             if (isset($_SESSION['Email'])) {
 
@@ -49,7 +49,7 @@
                 <?php
             } else {
                 ?>
-                <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
+                <div class="navitemlogin"><a href="Login_Page.php" class="active">Login</a></div>
                 <?php
             }
             ?>
@@ -85,31 +85,33 @@
         </div>
     </nav>
 
-
-    <div class="landingtopbannerimgcontainer">
-        <div class="landingtopbannertexttitle">
-            Moffat Bay Lodge
-            <br>
+    <!--Moffat Bay Banner and Title-->
+    <div class="container">
+        <div class="bannerimg">
+            <p>Moffat Bay Lodge</p>
         </div>
-        <div class="centeredtextlanding">Welcome! Your adventure starts here.
-            <br>
-            Start exploring for your next adventure.
-            <a href="./about.html">Start Here</a>
+
+        <!--Login Box-->
+        <!--NOTES FOR RACHEL. I am struggling with getting the CSS to work with this.-->
+        <div class="bodyinformation">
+            <div class="box">
+               
+                    <div style="font-size: 40px;">Book Now</div><br>
+                    <div class="successstatus" role="alert">
+                            Congrats! You booked your reservation!
+                        </div>
+                    <br>
+                    
+                    
+
+                    
+            </div>
+        </div>
+
+        <!--Bottom of Screen Color-->
+        <div class="footer">
 
         </div>
-    </div>
-
-
-
-    <div class="footer">
-        <p>This website was created as a class assignment
-            <br>
-            CSD460 Capstone in Software Development Project - Group B
-            <br>
-            Bellevue University
-        </p>
-
-    </div>
 </body>
 
 </html>

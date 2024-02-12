@@ -20,12 +20,12 @@ $country = isset($_POST['country']) ? $_POST['country'] : '';
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-//Uncomment to display any errors on the page that occur on backend
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 //Database Connection
-
+$success = 0;
 $host = 'localhost';
 $username = 'moffat_user';
 $sqlpassword = 'groupb';
