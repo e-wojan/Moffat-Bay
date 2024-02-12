@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$checkIn = isset($_POST['checkin']) ? $_POST['checkout'] : '';
+$checkIn = isset($_POST['checkin']) ? $_POST['checkin'] : '';
 $checkOut = isset($_POST['checkout']) ? $_POST['checkout'] : '';
 $guests = isset($_POST['guests']) ? $_POST['guests'] : '';
 $requests = isset($_POST['specialrequests']) ? $_POST['specialrequests'] : '';
