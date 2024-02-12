@@ -19,19 +19,9 @@ switch($roomId){
     case '103':
         $roomId = 103;
         break;
-    case '104':
-        $roomId = 104;
-        break;
-    case '105':
-        $roomId = 105;
-    case '106':
-        $roomId = 106;
-    case '107':
-        $roomId = 107;
-    case '108':
-        $roomId = 108;
-    
 }
+
+
 
 
 error_reporting(E_ALL);
@@ -53,8 +43,11 @@ if (isset($_SESSION['Email'])) {
     if ($conn->connect_error) {
         die('Connection Failed: ' . $conn->connect_error);
     
-    } else {
+    } 
+    else {
+        
         if (isset($_POST['bookStay'])) {
+            
             $query = "select * from Users where Email = '$user' limit 1";
             //mysqli uses the sql connector (con) to implement $query and ensure a match occurs
             $result = mysqli_query($conn, $query);
@@ -69,46 +62,256 @@ if (isset($_SESSION['Email'])) {
                     $userId = $user_data['User_ID'];
                 }  
                 
-                $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
-
-            //mysqli uses the sql connector (con) to implement $query and ensure a match occurs
-            $result = mysqli_query($conn, $query);
-
-            $available = mysqli_fetch_assoc($result);
-            if($available['Availability'] == 0){
-                   
-                $_SESSION['status'] = 'Sorry, that room is no longer available.';
-                header("Location: reservations.php");
-            }
-            else{
-                $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
-                values(?,?,?,?,?,?,?)");
-                    $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
-                    $stmt->execute();
-                    
-                    if($stmt){
-                        $zero = 0;
-                        $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
-                        $stmt->execute();
-                        header("Location: Reservation_Success.php");
-                    }
-               
-                    
-                    $stmt->close();
-                    $conn->close();
-            }
                 
-            
-    
-           
-        }
-    }
+                if($roomId == 101){
+                    echo $roomId;
+                    
+                    $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
 
-}
+                    //mysqli uses the sql connector (con) to implement $query and ensure a match occurs
+                    $result = mysqli_query($conn, $query);
+        
+                    $available = mysqli_fetch_assoc($result);
+                    echo $available['Availability'];
+                   
+                    if($available['Availability'] == 0){
+                        
+                        $roomId = 105;
+                        echo $roomId;
+                        $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+
+                    
+                        $result = mysqli_query($conn, $query);
+        
+                        $available = mysqli_fetch_assoc($result);
+                        echo $available['Availability'];
+                        if($available['Availability'] == 0){
+                            
+                            $roomId = 107;
+                            $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+
+                    
+                            $result = mysqli_query($conn, $query);
+        
+                            $available = mysqli_fetch_assoc($result);
+                        }
+                        
+                        if($available['Availability'] == 0){
+                            error_reporting(E_ALL);
+                            ini_set('display_errors', 1);
+                            setError();
+                            // $_SESSION['status'] = 'Sorry, that room is no longer available.';
+                            // header("Location: reservations.php");
+                        }
+                        else {
+                            $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                            values(?,?,?,?,?,?,?)");
+                            $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                            $stmt->execute();
+                            
+                            if($stmt){
+                                $zero = 0;
+                                $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                                $stmt->execute();
+                                header("Location: Reservation_Success.php");
+                            }
+                
+                        
+                            $stmt->close();
+                            $conn->close();
+                         }
+                        
+                        
+                    }
+                    else{
+                    $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                    values(?,?,?,?,?,?,?)");
+                        $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                        $stmt->execute();
+                        
+                        if($stmt){
+                            $zero = 0;
+                            $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                            $stmt->execute();
+                            header("Location: Reservation_Success.php");
+                        }
+                
+                        
+                        $stmt->close();
+                        $conn->close();
+                    }
+                }
+                elseif($roomId == 102){
+                        
+                        $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+        
+                        //mysqli uses the sql connector (con) to implement $query and ensure a match occurs
+                        $result = mysqli_query($conn, $query);
+            
+                        $available = mysqli_fetch_assoc($result);
+                        if($available['Availability'] == 0){
+                            $roomId = 104;
+                            $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+        
+                        
+                            $result = mysqli_query($conn, $query);
+            
+                            $available = mysqli_fetch_assoc($result);
+                            if($available['Availability'] == 0){
+                                $roomId = 108;
+                                $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+        
+                        
+                                $result = mysqli_query($conn, $query);
+            
+                                $available = mysqli_fetch_assoc($result);
+                            }
+                            else{
+                                $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                                values(?,?,?,?,?,?,?)");
+                                    $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                                    $stmt->execute();
+                                    
+                                    if($stmt){
+                                        $zero = 0;
+                                        $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                                        $stmt->execute();
+                                        header("Location: Reservation_Success.php");
+                                    }
+                            
+                                    
+                                    $stmt->close();
+                                    $conn->close();
+                             }
+                            if($available['Availability'] == 0){
+                                setError();
+                                // $_SESSION['status'] = 'Sorry, that room is no longer available.';
+                                // header("Location: reservations.php");
+                            }
+                            else{
+                                $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                                values(?,?,?,?,?,?,?)");
+                                    $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                                    $stmt->execute();
+                                    
+                                    if($stmt){
+                                        $zero = 0;
+                                        $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                                        $stmt->execute();
+                                        header("Location: Reservation_Success.php");
+                                    }
+                            
+                                    
+                                    $stmt->close();
+                                    $conn->close();
+                            }
+                        }
+                        else {
+                            $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                            values(?,?,?,?,?,?,?)");
+                                $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                                $stmt->execute();
+                                
+                                if($stmt){
+                                    $zero = 0;
+                                    $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                                    $stmt->execute();
+                                    header("Location: Reservation_Success.php");
+                                }
+                        
+                                
+                                $stmt->close();
+                                $conn->close();
+                        }
+                }
+                elseif($roomId == 103){
+                        $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+        
+                        //mysqli uses the sql connector (con) to implement $query and ensure a match occurs
+                        $result = mysqli_query($conn, $query);
+            
+                        $available = mysqli_fetch_assoc($result);
+                        if($available['Availability'] == 0){
+                            $roomId = 106;
+                            $query = "select * from Rooms where Room_ID = '$roomId' limit 1";
+        
+                        
+                            $result = mysqli_query($conn, $query);
+            
+                            $available = mysqli_fetch_assoc($result);
+                            
+                            if($available['Availability'] == 0){
+                                setError();
+                                // $_SESSION['status'] = 'Sorry, that room is no longer available.';
+                                // header("Location: reservations.php");
+                            }
+                            else{
+                                $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                                values(?,?,?,?,?,?,?)");
+                                    $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                                    $stmt->execute();
+                                    
+                                    if($stmt){
+                                        $zero = 0;
+                                        $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                                        $stmt->execute();
+                                        header("Location: Reservation_Success.php");
+                                    }
+                            
+                                    
+                                    $stmt->close();
+                                    $conn->close();
+                            }
+                        }
+                        else{
+                            $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                            values(?,?,?,?,?,?,?)");
+                                $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                                $stmt->execute();
+                                
+                                if($stmt){
+                                    $zero = 0;
+                                    $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                                    $stmt->execute();
+                                    header("Location: Reservation_Success.php");
+                                }
+                        
+                                
+                                $stmt->close();
+                                $conn->close();
+                        }
+                }
+                else
+                {
+                    $stmt = $conn->prepare("insert into Reservations(Date_of_check_in, Date_of_check_out, Reservation_Status, Room_ID, Special_Requests, Total_Guests, User_ID)
+                    values(?,?,?,?,?,?,?)");
+                        $stmt->bind_param('sssisii', $checkIn, $checkOut, $status, $roomId, $requests, $guests, $userId);
+                        $stmt->execute();
+                        
+                        if($stmt){
+                            $zero = 0;
+                            $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
+                            $stmt->execute();
+                            header("Location: Reservation_Success.php");
+                        }
+                
+                        
+                        $stmt->close();
+                        $conn->close();
+                }
+           }
+        }
+
+    }
 }
 
 else{
     header('Location: Reservation_Login.php');
+}
+
+function setError(){
+    $_SESSION['status'] = 'Sorry, that room is no longer available.';
+    header("Location: reservations.php");
 }
 
 

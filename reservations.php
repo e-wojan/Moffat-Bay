@@ -173,7 +173,7 @@
                 
                     
             </div>  
-            <div class="room2">
+            <!-- <div class="room2">
                 <div class="bedroomimage">
                     <img src="images/DoubleBed.jpg" alt="Double Bed">
                 </div>
@@ -192,7 +192,7 @@
                     <input type="radio" name="room" value="107"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
-            </div>  
+            </div>   -->
 
             <div class="room4">
                  <div class="bedroomimage">
@@ -204,7 +204,7 @@
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
             </div> 
-            <div class="room5">
+            <!-- <div class="room5">
                  <div class="bedroomimage">
                     <img src="images/QueenBed.jpg" alt="Queen Bed">
                 </div>
@@ -213,8 +213,8 @@
                     <input type="radio" name="room" value="104"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>  
-            </div> 
-            <div class="room6">
+            </div>  -->
+            <!-- <div class="room6">
                 <div class="bedroomimage">
                     <img src="images/QueenBed.jpg" alt="Queen Bed">
                 </div>
@@ -223,7 +223,7 @@
                     <input type="radio" name="room" value="108"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
-            </div> 
+            </div>  -->
             <div class="room7">
                  <div class="bedroomimage">
                     <img src="images/kingbed.jpg" alt="King Bed">
@@ -234,7 +234,7 @@
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
             </div>  
-            <div class="room8">
+            <!-- <div class="room8">
                 <div class="bedroomimage">
                     <img src="images/kingbed.jpg" alt="King Bed">
                 </div>
@@ -243,7 +243,7 @@
                     <input type="radio" name="room" value="106"><br>
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
-            </div>  
+            </div>   -->
 
           </div>
          

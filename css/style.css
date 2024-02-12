@@ -514,12 +514,14 @@ padding-bottom: 0.5rem;
 
 .rescontainer3{
 display: flex;
+margin-top: 1rem;
 flex-wrap: wrap;
 width: 100%;
 justify-content: space-between;
 padding-top: 1rem;
 padding-bottom: 1rem;
 align-content: space-evenly;
+justify-content: center;
 }
 
 .rescontainer4{
