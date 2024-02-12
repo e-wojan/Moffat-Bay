@@ -21,7 +21,7 @@
         <a href="./about.php">About</a>
         <a href="./contact.php">Contact Us</a>
         <a href="./attractions.php" class="active">Attractions</a>
-        <a href="./reservationss.html">Reservations</a>
+        <a href="./reservationss.php">Reservations</a>
         <a href="./registration_page.php">Registration</a>
         <?php
             if (isset($_SESSION['Email'])) {
