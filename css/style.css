@@ -529,21 +529,13 @@ padding-bottom: 1rem;
 #logout{
 
 position: absolute;
-right: 200px;
+right: 215px;
 top: 1px;
-}
-
-#logout:hover{
-background-color: none;
 }
 
 #logoutlink{
 text-decoration: underline;
 color: lightblue;
-}
-
-#logout:hover{
-  pointer-events: none;  
 }
 
 .room1{
