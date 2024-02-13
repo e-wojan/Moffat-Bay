@@ -87,11 +87,10 @@
     </nav>
 
     <!--Moffat Bay Banner and Title-->
-    <div class="container">
         <div class="bannerimg">
             <p>Moffat Bay Lodge</p>
         </div>
-
+ <div class="container">
         <!--Login Box-->
         <!--NOTES FOR RACHEL. I am struggling with getting the CSS to work with this.-->
         <div class="bodyinformation">
