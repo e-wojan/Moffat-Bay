@@ -111,10 +111,10 @@
                     ?>
 
                     <label for="fname">Enter Your Email Address:</label><br>
-                    <input type="text" name="user_name"  class="registrationinput"><br><br>
+                    <input type="text" name="user_name"  class="registrationinput" required><br><br>
 
                     <label for="fname">Enter Your Password:</label><br>
-                    <input type="password" name="password" class="registrationinput"><br><br>
+                    <input type="password" name="password" class="registrationinput" required><br><br>
 
                     <input class="btn" type="submit" value="Login"><br><br>
 
