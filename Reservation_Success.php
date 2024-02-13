@@ -15,6 +15,7 @@
 <?php 
     session_start();
     include "Loginfunction.php";
+    
     ?>
     <nav>
         <!--logo-->
@@ -98,7 +99,7 @@
                
                     <div style="font-size: 40px;">Book Now</div><br>
                     <div class="successstatus" role="alert">
-                            Congrats! You booked your reservation!
+                            Congrats! You booked your reservation! Your confirmation number is <?php echo $_SESSION['confirmation']?>
                         </div>
                     <br>
                     

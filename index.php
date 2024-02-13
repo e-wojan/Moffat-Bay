@@ -94,7 +94,7 @@
         <div class="centeredtextlanding">Welcome! Your adventure starts here.
             <br>
             Start exploring for your next adventure.
-            <a href="./about.html">Start Here</a>
+            <a href="./about.php">Start Here</a>
 
         </div>
     </div>

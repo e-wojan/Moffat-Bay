@@ -9,6 +9,12 @@ $roomId = isset($_POST['room']) ? $_POST['room'] : '';
 $status = 'Confirmed';
 $user = $_SESSION['Email'];
 
+
+if($roomId == ''){
+    $_SESSION['status'] = "Please select a room.";
+    header("Location: reservations.php");
+}
+
 switch($roomId){
     case '101':
         $roomId = 101;
@@ -23,6 +29,7 @@ switch($roomId){
         $roomId = 104;
         break;
 }
+
 
 
 
@@ -136,7 +143,20 @@ if (isset($_SESSION['Email'])) {
                                 $zero = 0;
                                 $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                 $stmt->execute();
-                                header("Location: Reservation_Success.php");
+                                if($stmt){
+                                    
+                                    $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                    
+                                    $result = mysqli_query($conn, $query);
+                                    
+                                    $confirmation = mysqli_fetch_assoc($result);
+                                    
+                                    $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                    header("Location: Reservation_Success.php");
+                                }
+                                
+                               
+                                
                             }
                 
                         
@@ -156,7 +176,17 @@ if (isset($_SESSION['Email'])) {
                             $zero = 0;
                             $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                             $stmt->execute();
-                            header("Location: Reservation_Success.php");
+                            if($stmt){
+                                
+                                $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                
+                                $result = mysqli_query($conn, $query);
+                               
+                                $confirmation = mysqli_fetch_assoc($result);
+                                
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                header("Location: Reservation_Success.php");
+                            }
                         }
                 
                         
@@ -217,6 +247,10 @@ if (isset($_SESSION['Email'])) {
                                         $zero = 0;
                                         $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                         $stmt->execute();
+                                        $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                         header("Location: Reservation_Success.php");
                                     }
                             
@@ -239,6 +273,10 @@ if (isset($_SESSION['Email'])) {
                                         $zero = 0;
                                         $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                         $stmt->execute();
+                                        $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                         header("Location: Reservation_Success.php");
                                     }
                             
@@ -257,6 +295,10 @@ if (isset($_SESSION['Email'])) {
                                     $zero = 0;
                                     $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                     $stmt->execute();
+                                    $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                     header("Location: Reservation_Success.php");
                                 }
                         
@@ -318,6 +360,10 @@ if (isset($_SESSION['Email'])) {
                                     $zero = 0;
                                     $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                     $stmt->execute();
+                                    $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                     header("Location: Reservation_Success.php");
                                 }
                         
@@ -340,6 +386,10 @@ if (isset($_SESSION['Email'])) {
                                     $zero = 0;
                                     $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                     $stmt->execute();
+                                    $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                     header("Location: Reservation_Success.php");
                                 }
                         
@@ -358,6 +408,10 @@ if (isset($_SESSION['Email'])) {
                                 $zero = 0;
                                 $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                 $stmt->execute();
+                                $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                 header("Location: Reservation_Success.php");
                             }
                     
@@ -419,6 +473,10 @@ if (isset($_SESSION['Email'])) {
                                 $zero = 0;
                                 $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                 $stmt->execute();
+                                $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                 header("Location: Reservation_Success.php");
                             }
                     
@@ -441,6 +499,10 @@ if (isset($_SESSION['Email'])) {
                                 $zero = 0;
                                 $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                                 $stmt->execute();
+                                $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                                 header("Location: Reservation_Success.php");
                             }
                     
@@ -459,6 +521,10 @@ if (isset($_SESSION['Email'])) {
                             $zero = 0;
                             $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                             $stmt->execute();
+                            $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                             header("Location: Reservation_Success.php");
                         }
                 
@@ -478,6 +544,10 @@ if (isset($_SESSION['Email'])) {
                             $zero = 0;
                             $stmt = $conn->prepare("update Rooms set Availability = '$zero' where Room_ID = '$roomId'");
                             $stmt->execute();
+                            $query = "select * from Reservations where User_ID = '$userId' order by Confirmation_Number desc limit 1";
+                                $result = mysqli_query($conn, $query);
+                                $confirmation = mysqli_fetch_assoc($result);
+                                $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
                             header("Location: Reservation_Success.php");
                         }
                 

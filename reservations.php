@@ -140,12 +140,7 @@
                         <label for="checkout" class="form-label">Check-Out Date</label>
                         <input type="date" class="reservationinput" name="checkout" required>
                     </div>
-                </div>
-
-
-
-                <div class="rescontainer2">
-                    <div class="mb-3 containeritem">
+                    <div class="mb-3 containeritem numberofguests">
                         <label for="guests" class="form-label">Number of Guests</label>
                         <select name="guests" class="reservationinput" required>
                             <option value="">--- Choose number of Guests ---</option>
@@ -155,6 +150,9 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
+                        <div id="passwordHelpBlock" class="form-text">
+                        1-2 guests are 115.00 per night; 3-5 guests are 150.00 per night.
+                        </div>
                     </div>
 
 
@@ -166,20 +164,36 @@
                 </div>
 
 
+
+                <div class="rescontainer2">
+                   
+                </div>
+
+
                 <div class="rescontainer3">
-                    <div class="room1">
-                        <div class="bedroomimage">
+                
+                    <div class="room1 rooms">
+                    
+                            
+                            <input type="radio" name="room" value="101"><br>
+                        <div class="roomcontainer">
+                        <h2 class="roomheader">Double Full</h2>
+                            <div class="bedroomimage">
                             <img src="images/DoubleBed.jpg" alt="Double Bed">
                         </div>
 
                         <div class="bedroominfo">
                             <label for="room">Double Full Bed</label>
-                            <input type="radio" name="room" value="101"><br>
-                            <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
+                            
+                            <p>Maximum occupancy: 5<br>
+                            <br>Our Double Full rooms are a perfect option for a retreat and features two full-sized beds, with additional 
+                            foldouts pr cribs available upon request, to ensure a comfortable night of rest.</p>
                         </div>
-
-
+                            </div>
+                    
+                        
                     </div>
+                    
                     <!-- <div class="room2">
                 <div class="bedroomimage">
                     <img src="images/DoubleBed.jpg" alt="Double Bed">
@@ -200,27 +214,44 @@
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
             </div>   -->
-
-                    <div class="room4">
-                        <div class="bedroomimage">
-                            <img src="images/QueenBed.jpg" alt="Queen Bed">
-                        </div>
-                        <div class="bedroominfo">
-                            <label for="room">Queen Bed</label>
-                            <input type="radio" name="room" value="102"><br>
-                            <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
-                        </div>
+                
+                    <div class="room2 rooms">
+                    
+                    <input type="radio" name="room" value="102"><br>
+                    <div class="roomcontainer">
+                    <h2 class="roomheader">Queen</h2>
+                            <div class="bedroomimage">
+                                <img src="images/QueenBed.jpg" alt="Queen Bed">
+                            </div>
+                            <div class="bedroominfo">
+                                <label for="room">Queen Bed</label>
+                               
+                                <p>Maximum occupancy: 5<br>
+                                <br>Our Queen rooms, with additional foldouts or cribs available upon request, 
+                                provide a tranquil space to decompress while enjoying your stay.</p>
+                            </div>
+                            </div>
+                        
                     </div>
-                    <div class="room5">
-                        <div class="bedroomimage">
-                            <img src="images/doublequeen.jpg" alt="Queen Bed">
-                        </div>
-                        <div class="bedroominfo">
-                            <label for="room">Double Queen Bed</label>
-                            <input type="radio" name="room" value="103"><br>
-                            <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
-                        </div>
+                    
+                        <div class="room3 rooms">
+                        <input type="radio" name="room" value="103"><br>
+                        <div class="roomcontainer">
+                        <h2 class="roomheader">Double Queen</h2>
+                            <div class="bedroomimage">
+                                <img src="images/doublequeen.jpg" alt="Queen Bed">
+                            </div>
+                            <div class="bedroominfo">
+                                <label for="room">Double Queen Bed</label>
+                                
+                                <p>Maximum occupancy: 5<br>
+                                <br>Our Double Queen rooms, with additional foldouts or cribs available upon request, feature two queen size beds and 
+                                are a perfect choice for guest who whish to enjoy a spacious stay during their retreat.</p>
+                            </div>
+                            </div>
+                            
                     </div>
+                    
                     <!-- <div class="room6">
                 <div class="bedroomimage">
                     <img src="images/QueenBed.jpg" alt="Queen Bed">
@@ -231,16 +262,25 @@
                     <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
                 </div>
             </div>  -->
-                    <div class="room7">
-                        <div class="bedroomimage">
-                            <img src="images/kingbed.jpg" alt="King Bed">
+                 
+                    <div class="room4 rooms">
+                    <input type="radio" name="room" value="104"><br>
+                    <div class="roomcontainer">
+                    <h2 class="roomheader">King</h2>
+                            <div class="bedroomimage">
+                                <img src="images/kingbed.jpg" alt="King Bed">
+                            </div>
+                            <div class="bedroominfo">
+                                <label for="room">King Bed</label>
+                                
+                                <p>Maximum occupancy: 5<br>
+                                <br>Our King rooms, with additional foldouts or cribs available upon request, are a perfect choice for 
+                                guests who desire a luxurious experience with a king-sized bed.</p>
+                            </div>
                         </div>
-                        <div class="bedroominfo">
-                            <label for="room">King Bed</label>
-                            <input type="radio" name="room" value="104"><br>
-                            <p>Here is some text. Here is some text. Here is some text. Here is some text.</p>
-                        </div>
+                         
                     </div>
+                    
                     <!-- <div class="room8">
                 <div class="bedroomimage">
                     <img src="images/kingbed.jpg" alt="King Bed">
@@ -256,7 +296,7 @@
 
                 <div class="rescontainer4">
                     <div class="griditem6">
-                        <input class="btn" type="submit" value="Book" name="bookStay">
+                        <input class="btn" type="submit" value="Book" name="bookStay" id="bookbtn">
                     </div>
                 </div>
 

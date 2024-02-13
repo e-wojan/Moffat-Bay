@@ -23,49 +23,62 @@
         <a href="./about.php" >About</a>
         <a href="./contact.php" class="active">Contact Us</a>
         <a href="./attractions.php">Attractions</a>
-        <a href="./reservationss.php">Reservations</a>
-        <a href="./registration_page.php">Registration</a>
+        <a href="./reservations.php">Reservations</a>
         <?php
             if (isset($_SESSION['Email'])) {
 
                 ?>
-        <div class="navitemlogin"><a href="Logout.php">Logout</a></div>
-        <?php
+                
+                <a href="">My Reservations</a>
+                
+                
+                <?php
             } else {
                 ?>
-        <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
-        <?php
+                <a href="./registration_page.php">Registration</a>
+                <?php
+            }
+            ?>
+            <?php
+            if (isset($_SESSION['Email'])) {
+
+                ?>
+                <div id="logout"><a href="Logout.php" id="logoutlink">Logout</a></div>
+                <?php
+            } else {
+                ?>
+                <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
+                <?php
             }
             ?>
 
-        <!-- <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div> -->
-        <div class="username">
-          <?php
+
+            <!-- <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div> -->
+            <div class="username">
+                <?php
                 if (isset($_SESSION['Email'])) {
 
                     ?>
-          <div class="" role="">
-            Hello,
-            <?php echo $_SESSION['Email'] . "!"; ?>
-          </div>
-          <?php
+                    <div class="" role="">Hello,
+                        <?php echo $_SESSION['Email'] . "!"; ?>
+                    </div>
+                    <?php
                 }
                 ?>
-        </div>
+            </div>
 
-        <div class="username">
-          <?php
+            <div class="username">
+            <?php
             if (isset($_SESSION['Email'])) {
 
             ?>
-          <div class="" role="">
-            Hello,
-            <?php echo $_SESSION['Email']."!"; ?>
-          </div>
-          <?php
+            <div class="" role="">Hello, 
+                <?php echo $_SESSION['Email']."!"; ?>
+            </div>
+            <?php
             }
             ?>
-        </div>
+            </div>
       </div>
     </nav>
 
