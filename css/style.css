@@ -537,6 +537,10 @@ top: 1px;
 text-decoration: underline;
 color: lightblue;
 }
+/*logout hover is to remove navigation styles from logout link  */
+#logout:hover{
+  display:none;
+}
 
 .room1{
 
@@ -729,7 +733,13 @@ input:checked ~ .roomcontainer{
 .rooms:hover{
   box-shadow: 0 0 12px #15F5BA;
 }
-
+#submitbutton{
+  text-align:center;
+}
+.signuptext{
+  text-align:center;
+  font-size:20px;
+}
 
 
 
