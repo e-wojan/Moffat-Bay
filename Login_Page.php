@@ -96,7 +96,7 @@
         <div class="bodyinformation">
             <div class="box">
                 <form method="post" action="Loginfunction.php">
-                    <div style="font-size: 40px;">Login Now</div><br>
+                    <div style="font-size: 40px;text-align:center;">Login Now</div><br>
                     <?php
                     if (isset($_SESSION['LoginError'])) {
 
@@ -115,10 +115,15 @@
 
                     <label for="fname">Enter Your Password:</label><br>
                     <input type="password" name="password" class="registrationinput" required><br><br>
-
+<div id="submitbutton">
                     <input class="btn" type="submit" value="Login"><br><br>
-
-                    <a href="register_page.php">Signup</a>
+</div>
+                    <a href="register_page.php">
+                        <div class="signuptext">
+                            Signup
+                        </div>
+                    </a>
+                        
                 </form>
             </div>
         </div>
