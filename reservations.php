@@ -99,9 +99,9 @@
 
 
 
-    <div class="container">
+   <!-- <div class="container">
 
-    </div> <!--container-->
+    </div> container-->
     <div class="bannerimg">
         <p>Moffat Bay Lodge</p>
     </div>
