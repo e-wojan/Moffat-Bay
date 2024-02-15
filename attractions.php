@@ -93,7 +93,7 @@
           <img class="attractimage2" src="./images/pexels-walker.jpg" />
         </div>
 
-        <h2>Attractions</h2>
+
         <br />
         Situated on a stunning coastline, the lodge boasts breathtaking
         panoramic views of turquoise waters, pristine sandy beaches, and lush
