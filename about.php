@@ -88,10 +88,10 @@
       <!--container-->
       <div class="bodyinformation">
         <div class="aboutimage">
+          <h2 style="font-size: 50px; font-weight:bolder;">About Us</h2>
           <img src="./images/logintrees.jpg" />
         </div>
-
-        <h2>About Us</h2>
+        
         <br />
         In today's fast-paced world, finding a tranquil retreat becomes
         paramount for those seeking respite from the daily grind. Moffat Bay
