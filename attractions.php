@@ -87,6 +87,7 @@
     <div class="container">
       <!--container-->
       <div class="attractionsbody">
+         <h2 style="font-size: 50px; font-weight: bolder;">Attractions</h2>
         <div class="attractionsimages">
           <img class="attractimage1" src="./images/pexels-snowboarding.jpg" />
           <img class="attractimage2" src="./images/pexels-walker.jpg" />
