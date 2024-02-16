@@ -2,12 +2,10 @@
 
 
 
-<?php
-
-
-// Start the session
-session_start();
-?>
+    <?php
+    session_start();
+    include "register.php";
+    ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,10 +33,6 @@ session_start();
     </div>
 
 
-    <div>
-        <h1>Reservation Confirmation</h1>
-    </div>
-
     <div class="respic"></div>
 
     <br><br>
@@ -47,9 +41,14 @@ session_start();
         <div id="grid-item-1">
             <h3 style="text-align:center">Reservation Summary:</h3>
         <div id="summary">
-			
-
-			</div>
+	<div class="reservation_summary--" style="text-align:center">
+    <p>Please review your choices below and confirm or cancel your reservation. </p>
+    <p>Start Date: </p>
+	<p>End Date: </p>
+	<p>Number of Guests : </p>
+    <p>Room Type: </p>
+</div>	
+		</div>
         </div>
 		
 			
@@ -60,13 +59,20 @@ session_start();
         <div id="grid-item-2">
 		
 		<h5 style="text-align:center">
-				<form action='reservations.php' method='post'>
-		echo ((strcat ($checkin));
+		<form action='reservations.php' method='post'>
+                <div class="rescontainer4">
+                    <div class="griditem6">
+                        <input class="btn" type="submit" value="Confirm" name="ConfirmStay" id="bookbtn">
+						<input class="btn" type="submit" value="Cancel" name="cancel-reservation" id="bookbtn">
+                    </div>
+                </div>
+				
+				
+
+		
 		
 		</form>
-		
-            <button class="confirm-btn-reservation-confirmation" id="cancel-reservation">Cancel</button>
-            <button class="confirm-btn-reservation-confirmation" id="confirm-reservation">Confirm</button>
+
 		</h5>
         
 		</div>
@@ -74,9 +80,11 @@ session_start();
 
 
 
-        <div class="footer">
-
-        </div>
 </body>
+<div class="footer">
+    <p>This website was created as a class assignment</p>
+    <p>CSD460 Capstone in Software Development Project - Group B</p>
+    <p>Bellevue University</p>
+</div>
 
 </html>
