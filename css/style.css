@@ -547,11 +547,14 @@ top: 1px;
 text-decoration: underline;
 color: lightblue;
 }
-/*logout hover is to remove navigation styles from logout link  .This makes the link disappear.
-#logout:hover{
-  display:none;
+#logout #logoutlink:hover{
+ 
+ background:none;
+ color: none;
+ border-radius: none;
+ font-weight: none;
+ 
 }
-*/
 .room1{
 
 flex-basis: 45%;
