@@ -169,16 +169,26 @@ margin-bottom: 85px;
 }
 .attractionsimages{
 float: right;
-
+display:grid;
 
 }
+.attractimage1{
+  margin-bottom:10px;
+  width: 300px;
+  height:200px;
+}
+.attractimage2{
+   width: 300px;
+  height:200px;
+  
+}
 
-.attractionsbody {
+/*.attractionsbody {
 
 height: 450px;
 
 
-}
+}*/
 
 
 h2{
