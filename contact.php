@@ -85,46 +85,92 @@
     <div class="bannerimg">
       <p>Moffat Bay Lodge</p>
     </div>
-  
-   
-      
+     
     
-    <div class="container"> <!--container-->
+     <div class="container"> <!--container-->
     <div class="bodyinformation">
+   <h2 id="registrationheader">Contact Us</h2>
+  <?php 
+$errors = '';
+$contactemail = 'racwhite2@my365.bellevue.edu';//<-----Put Your email address here.
 
-    <h2>Contact Us</h2>
-    <br>
-        <p>
-            If you are searching for a peaceful and enchanting getaway, look no further than our lodge.
-             Nestled in the heart of nature, our lodge offers the perfect ambiance for those seeking serenity and relaxation.
-            Whether you are planning a weekend escape, a romantic retreat, or a family vacation, our lodge has something to offer for everyone.
-            <br>
-            <br>
-            
-            One of the most important aspects of any lodge experience is the ease of communication and accessibility. 
-            At our lodge, we understand the importance of providing clear and efficient ways for guests to contact us. 
-            We have established multiple channels of communication to ensure that your needs and preferences are met without any hassle.
-            <br>
-            <br>
-            
-            First and foremost, we have a dedicated phone line which is available 24/7.
-             Our friendly and professional staff are just a phone call away, ready to assist you with any inquiries or concerns you may have.
-              Whether you need assistance with reservations, want to inquire about nearby attractions, or have any specific requests, 
-              our team is committed to providing you with the assistance you need to make your stay truly memorable.
-              <br>
-              <br>
+$fullName = isset($_POST['fullName']) ? $_POST['fullName'] : '';
+$emailUser = isset($_POST['emailUser']) ? $_POST['emailUser'] : '';
+$messageUser = isset($_POST['messageUser']) ? $_POST['messageUser'] : '';
 
-              <h3>Email: moffatbaylodge@groupb.com
-                <br>
-                Telephone: (800) 555-5555
-                <br>
-                Social Media:
+if (isset($_POST['send'])){
 
-              </h3>
-            </p>
-</div>
+if(empty($_POST['fullName'])  || 
+   empty($_POST['emailUser']) || 
+   empty($_POST['messageUser']))
+{
+    $errors .= "\n All fields required, please try again";
+}
 
-</div> <!--container-->
+$fullname = $_POST['fullName']; 
+$emailUser = $_POST['emailUser']; 
+$messageUser = $_POST['messageUser']; 
+
+if (!filter_var($emailUser, FILTER_VALIDATE_EMAIL))
+
+{
+    $errors .= "\n Invalid email address, please try again";
+}
+
+if(empty($errors))
+{
+	$to = $contactemail; 
+	$email_subject = "Contact form submission: $fullName";
+	$email_body = "You have received a new message. ".
+	" Here are the details:\n Name: $fullName \n Email: $emailUser \n Message \n $messageUser"; 
+	
+	$headers = "From: $contactemail\n"; 
+	$headers .= "Reply-To: $emailUser";
+	
+	mail($to,$email_subject,$email_body,$headers);
+	//redirect to the 'thank you' page
+	header('Location: contactthankyou.php');
+} 
+
+}
+
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+	<title>Contact form handler</title>
+</head>
+
+<body>
+<!-- This page is displayed only if there is some error -->
+<?php
+echo nl2br($errors);
+?>
+
+  <form name="contactFormEmail" method="post" >
+     
+   
+      <label>Full Name <em style="color: red;">*</em></label> 
+      <input type="text" name="fullName" class="registrationinput"  id="fullName"> 
+
+      <br>
+
+    
+      <label>Email <em style="color: red;">*</em></label> 
+      <input type="email" name="emailUser" class="registrationinput"  id="emailUser"> 
+  
+       <br>
+ 
+      <label>Message <em style="color: red;">*</em></label> 
+      <textarea name="messageUser" class="registrationinput" id="messageUser"> </textarea>
+      <br>
+       
+
+        <div id=""submitbutton style="text-align: center;">
+            <button type="submit" name="send" class="btn">Send</button>
+        </div> 
+  </form>
+</div> 
 
 <div class="footer">
     <p>This website was created as a class assignment
