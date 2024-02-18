@@ -88,7 +88,7 @@
       <!--container-->
       <div class="bodyinformation">
         <div class="aboutimage">
-          <h2 style="font-size: 50px; font-weight:bolder;">About Us</h2>
+          <h2 id="registrationheader">About Us</h2>
           <img src="./images/logintrees.jpg" />
         </div>
         
