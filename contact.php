@@ -151,7 +151,7 @@ echo nl2br($errors);
      
    
       <label>Full Name <em style="color: red;">*</em></label> 
-      <input type="text" name="fullName" class="registrationinput"  id="fullName"> 
+      <input type="text" name="fullName" class="registrationinput"  id="fullName" placeholder"Please enter First and Last Name."> 
 
       <br>
 
