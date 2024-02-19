@@ -754,7 +754,11 @@ input:checked ~ .roomcontainer{
   font-size:20px;
 }
 
-
+,contactcontainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+}
 
 
 
