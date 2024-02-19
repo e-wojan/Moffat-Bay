@@ -134,23 +134,31 @@
                                         ?> 
                                     </div>;
                                 <div class="roomtypeinfo">
-                                <label class="form-label flex" for="room">Room Type</label>
-                                    <input class="reservationinput" type="text" name="room" value=
+                                <label class="form-label flex" for="room">Room Type: </label>
+                                    <!-- <input class="reservationinput" type="text" name="room" value= -->
                                     <?php 
                                         if($_SESSION['roomtype'] == 101 || $_SESSION['roomtype'] == 105 || $_SESSION['roomtype'] == 109 || $_SESSION['roomtype'] == 113 || $_SESSION['roomtype'] == 117){
-                                            echo "Double-Full";
+                                            echo "Double-Full" ."<br>";
+                                            echo "Our Double Full rooms are a perfect option for a retreat and features two full-sized beds, with additional 
+                                            foldouts pr cribs available upon request, to ensure a comfortable night of rest.";
                                         }
                                         elseif($_SESSION['roomtype'] == 102 || $_SESSION['roomtype'] == 106 || $_SESSION['roomtype'] == 110 || $_SESSION['roomtype'] == 114 || $_SESSION['roomtype'] == 118){
-                                            echo "Queen";
+                                            echo "Queen" . "<br>";
+                                            echo "Our Queen rooms, with additional foldouts or cribs available upon request, 
+                                            provide a tranquil space to decompress while enjoying your stay.";
                                         }
                                         elseif($_SESSION['roomtype'] == 103 || $_SESSION['roomtype'] == 107 || $_SESSION['roomtype'] == 111 || $_SESSION['roomtype'] == 115 || $_SESSION['roomtype'] == 119){
-                                            echo "Double-Queen";
+                                            echo "Double-Queen" ."<br>";
+                                            echo "Our Double Queen rooms, with additional foldouts or cribs available upon request, feature two queen size beds and 
+                                            are a perfect choice for guest who whish to enjoy a spacious stay during their retreat.";
                                         }
                                         else{
-                                            echo "King";
+                                            echo "King" ."<br>";
+                                            echo "Our King rooms, with additional foldouts or cribs available upon request, are a perfect choice for 
+                                            guests who desire a luxurious experience with a king-sized bed.";
                                         }
                                         ?> 
-                                        readonly>
+                                        <!-- readonly> -->
                                 </div>
                                 </div>
                             <div class="requests">
@@ -228,7 +236,7 @@
                                     }
                                     ?>
                                     <br>
-                                    ----------------------------------
+                                    -----------------
                                     <br>
                                     Total: 
                                     <?php 
@@ -246,7 +254,7 @@
                                     }
 
                                     
-                                    echo "$" .$_SESSION['guests'] * $rate * $days;
+                                    echo "$" .$rate * $days * $_SESSION['guests'];;
                                     ?>
                                 </div>
                         </div>

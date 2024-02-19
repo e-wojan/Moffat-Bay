@@ -816,6 +816,7 @@ flex-basis: 25%;
 
 .roomtypeinfo{
   flex-basis: 25%;
+  justify-items: baseline;
 }
 
 .requests{
