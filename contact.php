@@ -190,7 +190,7 @@ echo nl2br($errors);
 
   
      <label>Email <em style="color: red;">*</em></label>
-     <input type="email" name="emailUser" class="registrationinput"  id="emailUser" placeholder="Please enter email address.">
+     <input type="email" name="emailUser" class="registrationinput"  id="emailUser" placeholder="Please enter your email address.">
        <br>
      <label>Message <em style="color: red;">*</em></label>
      <textarea name="messageUser" class="registrationinput" id="messageUser"> </textarea>
