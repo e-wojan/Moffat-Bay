@@ -96,16 +96,180 @@
         <div class="bodyinformation">
             <div class="box">
                
-                    <div style="font-size: 40px;">Book Now</div><br>
+                    <div style="font-size: 40px;">Reservation Summary</div><br>
                     <div class="successstatus" role="alert">
                             Congrats! You booked your reservation! Your confirmation number is <?php echo $_SESSION['confirmation']?>
                         </div>
+                    <div class="bigcontainer">
+                        <div class="summarycontainer">
+
+                            <div class="summaryitem">
+                                <label class="form-label flex" for="checkin">Check In Date</label>
+                                <input class="reservationinput" type="text" name="checkin" value=<?php echo $_SESSION['checkin'];?> readonly>
+                            </div>
+                            <div class="summaryitem">
+                                <label class="form-label flex" for="checkout">Check Out Date</label>
+                                <input class="reservationinput" type="text" name="checkout" value=<?php echo $_SESSION['checkout'];?> readonly>
+                            </div>
+                            <div class="summaryitem">
+                                <label class="form-label flex" for="guests">Total Guests</label>
+                                <input class="reservationinput" type="text" name="guests" value=<?php echo $_SESSION['guests'];?> readonly>
+                            </div>
+                            <div class="imageflex">
+                                <div class="roomtypestuff">
+                                    <div class="roomtypeimage">
+                                    <?php 
+                                        if($_SESSION['roomtype'] == 101 || $_SESSION['roomtype'] == 105 || $_SESSION['roomtype'] == 109 || $_SESSION['roomtype'] == 113 || $_SESSION['roomtype'] == 117){
+                                            echo "<img src='images\DoubleBed.jpg' alt='doublebed'>" ;
+                                        }
+                                        elseif($_SESSION['roomtype'] == 102 || $_SESSION['roomtype'] == 106 || $_SESSION['roomtype'] == 110 || $_SESSION['roomtype'] == 114 || $_SESSION['roomtype'] == 118){
+                                            echo "<img src='images\QueenBed.jpg' alt='queenbed'>";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 103 || $_SESSION['roomtype'] == 107 || $_SESSION['roomtype'] == 111 || $_SESSION['roomtype'] == 115 || $_SESSION['roomtype'] == 119){
+                                            echo "<img src='images\doublequeen.jpg' alt='doublequeenbed'>";
+                                        }
+                                        else{
+                                            echo "<img src='images\kingbed.jpg' alt='kingbed'>";
+                                        }
+                                        ?> 
+                                    </div>;
+                                <div class="roomtypeinfo">
+                                <label class="form-label flex" for="room">Room Type</label>
+                                    <input class="reservationinput" type="text" name="room" value=
+                                    <?php 
+                                        if($_SESSION['roomtype'] == 101 || $_SESSION['roomtype'] == 105 || $_SESSION['roomtype'] == 109 || $_SESSION['roomtype'] == 113 || $_SESSION['roomtype'] == 117){
+                                            echo "Double-Full";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 102 || $_SESSION['roomtype'] == 106 || $_SESSION['roomtype'] == 110 || $_SESSION['roomtype'] == 114 || $_SESSION['roomtype'] == 118){
+                                            echo "Queen";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 103 || $_SESSION['roomtype'] == 107 || $_SESSION['roomtype'] == 111 || $_SESSION['roomtype'] == 115 || $_SESSION['roomtype'] == 119){
+                                            echo "Double-Queen";
+                                        }
+                                        else{
+                                            echo "King";
+                                        }
+                                        ?> 
+                                        readonly>
+                                </div>
+                                </div>
+                            <div class="requests">
+                                <label class="form-label flex" for="requests">Special Requests</label>
+                                <input class="reservationinput" type="textarea" name="requests" value=<?php echo $_SESSION['requests'];?> readonly>
+                            </div>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="costcontainer">
+                                <div>
+                                    <label class="form-label flex" for="requests">Total Cost:</label>
+                                    <br>
+                                    <br>
+                                    Length of Stay:
+                                    <?php
+                                     $date1 = strtotime($_SESSION['checkin']);
+                                     $date2 = strtotime($_SESSION['checkout']);
+                                     $diff = $date2 - $date1;
+                                     $days = floor($diff / (60 * 60 * 24));
+                                     echo $days . " day(s)";
+                                    
+                                    ?>
+                                    <br>
+                                    <br>
+                                    Guests:
+                                    <?php
+                                    echo $_SESSION['guests'];
+                                    ?>
+                                    <br>
+                                    <br>
+                                    Room Type: 
+                                    <?php 
+                                        if($_SESSION['roomtype'] == 101 || $_SESSION['roomtype'] == 105 || $_SESSION['roomtype'] == 109 || $_SESSION['roomtype'] == 113 || $_SESSION['roomtype'] == 117){
+                                            echo "Double-Full";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 102 || $_SESSION['roomtype'] == 106 || $_SESSION['roomtype'] == 110 || $_SESSION['roomtype'] == 114 || $_SESSION['roomtype'] == 118){
+                                            echo "Queen";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 103 || $_SESSION['roomtype'] == 107 || $_SESSION['roomtype'] == 111 || $_SESSION['roomtype'] == 115 || $_SESSION['roomtype'] == 119){
+                                            echo "Double-Queen";
+                                        }
+                                        else{
+                                            echo "King";
+                                        }
+                                        ?> 
+                                    <br>
+                                    <br>
+                                    Room Cost:
+                                    <?php 
+                                        if($_SESSION['roomtype'] == 101 || $_SESSION['roomtype'] == 105 || $_SESSION['roomtype'] == 109 || $_SESSION['roomtype'] == 113 || $_SESSION['roomtype'] == 117){
+                                            echo "$120";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 102 || $_SESSION['roomtype'] == 106 || $_SESSION['roomtype'] == 110 || $_SESSION['roomtype'] == 114 || $_SESSION['roomtype'] == 118){
+                                            echo "$140";
+                                        }
+                                        elseif($_SESSION['roomtype'] == 103 || $_SESSION['roomtype'] == 107 || $_SESSION['roomtype'] == 111 || $_SESSION['roomtype'] == 115 || $_SESSION['roomtype'] == 119){
+                                            echo "$130";
+                                        }
+                                        else{
+                                            echo "$150";
+                                        }
+                                        ?> 
+                                    <br>
+                                    <br>
+                                    Cost per Guest: 
+                                    <?php
+                                    if($_SESSION['guests'] == 1 or $_SESSION['guests'] == 2){
+                                        echo "$115 per night";
+                                    }
+                                    else{
+                                        echo "$150 per night";
+                                    }
+                                    ?>
+                                    <br>
+                                    ----------------------------------
+                                    <br>
+                                    Total: 
+                                    <?php 
+                                    $rate;
+                                    $date1 = strtotime($_SESSION['checkin']);
+                                    $date2 = strtotime($_SESSION['checkout']);
+                                    $diff = $date2 - $date1;
+                                    $days = floor($diff / (60 * 60 * 24));
+                                    
+                                    if($_SESSION['guests'] == 1 || $_SESSION['guests'] == 2){
+                                        $rate = 115;
+                                    }
+                                    else{
+                                        $rate = 150;
+                                    }
+
+                                    
+                                    echo "$" .$_SESSION['guests'] * $rate * $days;
+                                    ?>
+                                </div>
+                        </div>
+                    </div>
+                
+                        
                     <br>
                     
                     
 
                     
             </div>
+            <div class="buttonContainer">
+                <div class="ressummarybtn">
+                    <form action="cancel_reservation.php" method="post">
+                        <input id="cancelres" type="submit" value="Cancel Reservation" class="cancelreservation">
+                        
+                    </form>
+                 </div>
+                 
+            </div>
+
+            
         </div>
 
         <!--Bottom of Screen Color-->

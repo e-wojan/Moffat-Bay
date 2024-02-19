@@ -152,6 +152,11 @@ if (isset($_SESSION['Email'])) {
                                     $confirmation = mysqli_fetch_assoc($result);
                                     
                                     $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                    $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                     header("Location: Reservation_Success.php");
                                 }
                                 
@@ -185,6 +190,11 @@ if (isset($_SESSION['Email'])) {
                                 $confirmation = mysqli_fetch_assoc($result);
                                 
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                 header("Location: Reservation_Success.php");
                             }
                         }
@@ -251,6 +261,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                         header("Location: Reservation_Success.php");
                                     }
                             
@@ -277,6 +292,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                         header("Location: Reservation_Success.php");
                                     }
                             
@@ -299,6 +319,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                     header("Location: Reservation_Success.php");
                                 }
                         
@@ -364,6 +389,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                     header("Location: Reservation_Success.php");
                                 }
                         
@@ -390,6 +420,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                     header("Location: Reservation_Success.php");
                                 }
                         
@@ -412,6 +447,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                 header("Location: Reservation_Success.php");
                             }
                     
@@ -477,6 +517,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                 header("Location: Reservation_Success.php");
                             }
                     
@@ -503,6 +548,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                                 header("Location: Reservation_Success.php");
                             }
                     
@@ -525,6 +575,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                             header("Location: Reservation_Success.php");
                         }
                 
@@ -548,6 +603,11 @@ if (isset($_SESSION['Email'])) {
                                 $result = mysqli_query($conn, $query);
                                 $confirmation = mysqli_fetch_assoc($result);
                                 $_SESSION['confirmation'] = $confirmation['Confirmation_Number'];
+                                $_SESSION['checkin'] = $confirmation['Date_of_Check_in'];
+                                    $_SESSION['checkout'] = $confirmation['Date_of_Check_out'];
+                                    $_SESSION['roomtype'] = $confirmation['Room_ID'];
+                                    $_SESSION['requests'] = $confirmation['Special_Requests'];
+                                    $_SESSION['guests'] = $confirmation['Total_Guests'];
                             header("Location: Reservation_Success.php");
                         }
                 
