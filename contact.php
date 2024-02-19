@@ -166,7 +166,7 @@ echo nl2br($errors);
 
 
              Secondly, we have the contact form which you can fill out with your inquiries, feedback,
-             or issues  and submit it directly to Moffat Bay Loadge.
+             or issues  and submit it directly to Moffat Bay Lodge.
              <br>
              <br>
   
