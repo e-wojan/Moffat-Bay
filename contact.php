@@ -170,9 +170,9 @@ echo nl2br($errors);
              <br>
              <br>
   
-             <h3>Email: moffatbaylodge@groupb.com
+             <h3>Email: <a href = "mailto: moffatbaylodge@groupb.com">moffatbaylodge@groupb.com</a>
                <br>
-               Telephone: (800) 555-5555
+               Telephone: <a href="tel:8005555555"> (800) 555-5555</a>
                <br>
            </div>
 
