@@ -147,30 +147,68 @@ if(empty($errors))
 echo nl2br($errors);
 ?>
 
-  <form name="contactFormEmail" method="post" >
-     
-   
-      <label>Full Name <em style="color: red;">*</em></label> 
-      <input type="text" name="fullName" class="registrationinput"  id="fullName" placeholder"Please enter First and Last Name."> 
+<div class="contactcontainer">
 
-      <br>
+   <div class="contactinformation">
+       <p>
+           One of the most important aspects of any lodge experience is the ease of communication and accessibility.
+           At our lodge, we understand the importance of providing clear and efficient ways for guests to contact us.
+           We have established multiple channels of communication to ensure that your needs and preferences are met without any hassle.
+           <br>
+           <br>
+          
+           First and foremost, we have a dedicated phone line which is available 24/7.
+            Our friendly and professional staff are just a phone call away, ready to assist you with any inquiries or concerns you may have.
+             Whether you need assistance with reservations, want to inquire about nearby attractions, or have any specific requests,
+             our team is committed to providing you with the assistance you need to make your stay truly memorable.
+             <br>
+             <br>
 
-    
-      <label>Email <em style="color: red;">*</em></label> 
-      <input type="email" name="emailUser" class="registrationinput"  id="emailUser"> 
+
+             Secondly, we have the contact form which you can fill out with your inquiries, feedback,
+             or issues  and submit it directly to Moffat Bay Loadge.
+             <br>
+             <br>
   
-       <br>
- 
-      <label>Message <em style="color: red;">*</em></label> 
-      <textarea name="messageUser" class="registrationinput" id="messageUser"> </textarea>
-      <br>
-       
+             <h3>Email: moffatbaylodge@groupb.com
+               <br>
+               Telephone: (800) 555-5555
+               <br>
+           </div>
 
-        <div id=""submitbutton style="text-align: center;">
-            <button type="submit" name="send" class="btn">Send</button>
-        </div> 
-  </form>
+
+<div class="contactform">
+ <form name="contactFormEmail" method="post" >
+   
+ 
+     <label>Full Name <em style="color: red;">*</em></label>
+     <input type="text" name="fullName" class="registrationinput"  id="fullName" placeholder="Please enter First and Last name.">
+
+
+     <br>
+
+
+  
+     <label>Email <em style="color: red;">*</em></label>
+     <input type="email" name="emailUser" class="registrationinput"  id="emailUser" placeholder="Please enter email address.">
+       <br>
+     <label>Message <em style="color: red;">*</em></label>
+     <textarea name="messageUser" class="registrationinput" id="messageUser"> </textarea>
+     <br>
+     
+
+
+       <div id=""submitbutton style="text-align: center;">
+           <button type="submit" name="send" class="btn">Send</button>
+       </div>
+ </form>
+</div>
+
+	     </div> <!--contactcontainer end -->
+		     
 </div> 
+</div> 
+		     
 
 <div class="footer">
     <p>This website was created as a class assignment
