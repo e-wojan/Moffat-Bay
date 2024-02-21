@@ -31,7 +31,7 @@
 
                 ?>
                 
-                <a href="">My Reservations</a>
+                <a href="./Reservation_Search.php">My Reservations</a>
                 
                 
                 <?php
