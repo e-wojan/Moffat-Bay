@@ -23,13 +23,13 @@ include ("Search_Function.php");
             <a href="./about.php">About</a>
             <a href="./contact.php">Contact Us</a>
             <a href="./attractions.php">Attractions</a>
-            <a href="./reservations.php" class="active">Reservations</a>
+            <a href="./reservations.php">Reservations</a>
             <?php
             if (isset($_SESSION['Email'])) {
 
                 ?>
 
-                <a href="./Reservation_Search.php">My Reservations</a>
+                <a href="./Reservation_Search.php" class="active">My Reservations</a>
 
 
                 <?php
