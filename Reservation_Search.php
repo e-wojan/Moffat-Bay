@@ -109,7 +109,7 @@
     $c_number = isset($_POST['c_number']) ? $_POST['c_number'] : '';
 
     if (!empty($c_number)) {
-        $query = "select * from Reservations where Confirmation_Number = '$c_number' limit 1";
+        $query = "select Confirmation_Number, Total_Guests, Date_of_Check_in, Date_of_Check_out, Special_Requests, Room_ID from Reservations where Confirmation_Number = '$c_number' limit 1";
         $result = mysqli_query($con, $query);
         if ($result) {
             if ($result && mysqli_num_rows($result) > 0) {
@@ -124,10 +124,10 @@
             <th>Special Requests</th>
             <th>Room Number</th>
         </tr>
-        <?php }
+        <?php 
                 while($row = $result->fetch_assoc()) { 
-                }
-            }?>
+                
+            ?>
             <tr class="data">
                 <td><?php echo "{$row['Confirmation_Number']}"; ?></td>
                 <td><?php echo "{$row['Total_Guests']}"; ?></td>
@@ -136,7 +136,7 @@
                 <td><?php echo "{$row['Special_Requests']}"; ?></td>
                 <td><?php echo "{$row['Room_ID']}"; ?></td>
             </tr>
-        <?php } ?>
+        <?php } }}}?>
     </table>
     </div>
     <!--container-->
