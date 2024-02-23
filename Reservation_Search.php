@@ -1,3 +1,9 @@
+<?php
+session_start();
+include ("connection.php");
+include ("Search_Function.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,11 +14,6 @@
   </head>
   <script></script>
   <body>
-    <?php
-  session_start();
-  include "connection.php";
-  ?>
-
     <nav>
         <!--logo-->
         <!--top navigation bar-->
@@ -92,28 +93,31 @@
 
     <div class="container">
       <!--container-->
-    <form method="post" action="Reservation_Search.php">
-        <label for="fname">Enter Your Confirmation Number:</label><br>
-        <input type="number" name="c_number"  class="registrationinput" required><br><br>
+      <div class="bodyinformation">
+        <div class="box">
+            <form method="post" action="Search_Function.php">
+                <div style="font-size: 40px;text-align:center;">Search Reservation</div><br>
+                <?php
+                if (isset($_SESSION['SearchError'])) {
 
-        <div id="submitbutton">
-        <input class="btn" type="submit" value="Search"><br><br>
-        </div>
-    </form>
+                    ?>
+                    <div class="alertstatus" role="alert">
+                        <?php echo $_SESSION['SearchError']; ?>
+                    </div>
+                    <?php
 
-    <?php
-    if ($con->connect_error) {
-        die("Connection failed: " . $con->connect_error);
-    }
+                    unset($_SESSION['SearchError']);
+                }
+                ?>
 
-    $c_number = isset($_POST['c_number']) ? $_POST['c_number'] : '';
+                <label for="fname">Enter Your Confirmation Number or Email:</label><br>
+                <input type="text" name="c_number"  class="registrationinput" required><br><br>
 
-    if (!empty($c_number)) {
-        $query = "select Confirmation_Number, Total_Guests, Date_of_Check_in, Date_of_Check_out, Special_Requests, Room_ID from Reservations where Confirmation_Number = '$c_number' limit 1";
-        $result = mysqli_query($con, $query);
-        if ($result) {
-            if ($result && mysqli_num_rows($result) > 0) {
-    ?>
+                <div id="submitbutton">
+                <input class="btn" type="submit" value="Search"><br><br>
+                </div>
+            </form>
+
     <table border="1">
         <caption><h3>Reservation Summary</h3></caption>
         <tr>
@@ -125,9 +129,12 @@
             <th>Room Number</th>
         </tr>
         <?php 
-                while($row = $result->fetch_assoc()) { 
-                
-            ?>
+        if (isset($_SESSION['result_data']))
+            $result_data = $_SESSION['result_data'];
+            //TEMP ECHO TO PRODUCE THE ARRAY PULLED CORRECTLY
+            echo '<pre>'; print_r($result_data); echo '</pre>';
+            while($row = $result_data->fetch_assoc()) {        
+        ?>
             <tr class="data">
                 <td><?php echo "{$row['Confirmation_Number']}"; ?></td>
                 <td><?php echo "{$row['Total_Guests']}"; ?></td>
@@ -136,7 +143,9 @@
                 <td><?php echo "{$row['Special_Requests']}"; ?></td>
                 <td><?php echo "{$row['Room_ID']}"; ?></td>
             </tr>
-        <?php } }}}?>
+        <?php 
+            }
+        ?>
     </table>
     </div>
     <!--container-->

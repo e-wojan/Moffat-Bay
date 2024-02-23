@@ -118,7 +118,7 @@
 <div id="submitbutton">
                     <input class="btn" type="submit" value="Login"><br><br>
 </div>
-                    <a href="register_page.php">
+                    <a href="registration_page.php">
                         <div class="signuptext">
                             Signup
                         </div>
