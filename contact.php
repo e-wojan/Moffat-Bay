@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>CSD460 Moffat Moffat Bay Lodge Contact Us Page</title>
+    <title>CSD460 Moffat Bay Lodge Contact Us Page</title>
 </head>
 <script>
 
@@ -136,7 +136,7 @@ if(empty($errors))
 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
-<html>
+<html lang="en">
 <head>
 	<title>Contact form handler</title>
 </head>
@@ -182,7 +182,7 @@ echo nl2br($errors);
    
  
      <label>Full Name <em style="color: red;">*</em></label>
-     <input type="text" name="fullName" class="registrationinput"  id="fullName" placeholder="Please enter First and Last name.">
+     <input type="text" name="fullName" class="registrationinput" required>
 
 
      <br>
@@ -190,15 +190,15 @@ echo nl2br($errors);
 
   
      <label>Email <em style="color: red;">*</em></label>
-     <input type="email" name="emailUser" class="registrationinput"  id="emailUser" placeholder="Please enter your email address.">
+     <input type="email" name="emailUser" class="registrationinput" required>
        <br>
      <label>Message <em style="color: red;">*</em></label>
-     <textarea name="messageUser" class="registrationinput" id="messageUser"> </textarea>
+     <textarea name="messageUser" class="registrationinput" required></textarea>
      <br>
      
 
 
-       <div id=""submitbutton style="text-align: center;">
+       <div id="submitbutton" style="text-align: center;">
            <button type="submit" name="send" class="btn">Send</button>
        </div>
  </form>
