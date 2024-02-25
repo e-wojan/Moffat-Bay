@@ -61,3 +61,20 @@ CREATE TABLE Reservations (
     Foreign KEY (Room_ID) REFERENCES Rooms(Room_ID),
     Foreign KEY (User_ID) REFERENCES Users(User_ID)
     );
+
+-- Creating View for Reservation Lookup
+CREATE VIEW ReservationInformation AS
+SELECT
+	u.First_Name,
+	u.Last_Name,
+	u.Email,
+	rm.Room_Type,
+	rs.Date_of_Check_in,
+	rs.Date_of_Check_out,
+    rs.Total_Guests,
+    rs.Special_Requests,
+	DATEDIFF(rs.Date_of_Check_out, rs.Date_of_Check_in) AS Nights_Booked,
+	rs.Confirmation_Number
+FROM Reservations rs
+JOIN Users u on u.User_ID = rs.User_ID
+JOIN Rooms rm on rm.Room_ID = rs.Room_ID;

@@ -27,7 +27,7 @@
 
                 ?>
                 
-                <a href="./Reservation_Search.php">My Reservations</a>
+                <a href="./reservation_lookup.php">My Reservations</a>
                 
                 
                 <?php
