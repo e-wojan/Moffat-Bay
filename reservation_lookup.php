@@ -134,33 +134,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($con, $query);
     if ($result) {
         if ($result && mysqli_num_rows($result) > 0) {
-            echo "<br><br><table>
+?>
+            <br><br><table class ="table-style">
+                <thead>
                     <tr>
-                    <th>Reservation ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Room Type</th>
-                    <th>Check In Date</th>
-                    <th>Check Out Date</th>
-                    <th>Number of Guests</th>
-                    <th>Nights Booked</th>
-                    </tr>";
-            // output data of each row
+                        <th>Reservation ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Room Type</th>
+                        <th>Check In Date</th>
+                        <th>Check Out Date</th>
+                        <th>Number of Guests</th>
+                        <th>Nights Booked</th>
+                    </tr>
+                </thead>
+                <tbody>
+<?php
             while ($row = $result->fetch_assoc()) {
-                echo "<tr class='data'>";
-                echo "<td>" . $row['Confirmation_Number'] . "</td>";
-                echo "<td>" . $row['First_Name'] . "</td>";
-                echo "<td>" . $row['Last_Name'] . "</td>";
-                echo "<td>" . $row['Email'] . "</td>";
-                echo "<td>" . $row['Room_Type'] . "</td>";
-                echo "<td>" . $row['Date_of_Check_in'] . "</td>";
-                echo "<td>" . $row['Date_of_Check_in'] . "</td>";
-                echo "<td>" . $row['Total_Guests'] . "</td>";
-                echo "<td>" . $row['Nights_Booked'] . "</td>";
-                echo "</tr>";
+?>
+                <tr>
+                <td><?php echo "{$row['Confirmation_Number']}"; ?></td>
+                <td><?php echo "{$row['First_Name']}"; ?></td>
+                <td><?php echo "{$row['Last_Name']}"; ?></td>
+                <td><?php echo "{$row['Email']}"; ?></td>
+                <td><?php echo "{$row['Room_Type']}"; ?></td>
+                <td><?php echo "{$row['Date_of_Check_in']}"; ?></td>
+                <td><?php echo "{$row['Date_of_Check_out']}"; ?></td>
+                <td><?php echo "{$row['Total_Guests']}"; ?></td>
+                <td><?php echo "{$row['Nights_Booked']}"; ?></td>
+                </tr>
+<?php
             }
-            echo "</table>";
+?>
+            </tbody></table>
+<?php
         } else {
             $_SESSION['SearchError'] = "Sorry, there were no reservations found with that confirmation number or email. Please try again.";
         }
