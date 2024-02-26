@@ -854,7 +854,7 @@ flex-basis: 25%;
 }
 
 .table-style thead tr {
-  background-color: #009879;
+  background-color: #466a72;
   color: #ffffff;
   text-align: left;
 }
@@ -873,11 +873,11 @@ flex-basis: 25%;
 }
 
 .table-style tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #466a72;
 }
 
 .table-style tbody tr.active-row {
   font-weight: bold;
-  color: #009879;
+  color: #466a72;
 }
 
