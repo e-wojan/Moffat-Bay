@@ -147,6 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <th>Check Out Date</th>
                         <th>Number of Guests</th>
                         <th>Nights Booked</th>
+						<th>Special Requests</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -163,6 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <td><?php echo "{$row['Date_of_Check_out']}"; ?></td>
                 <td><?php echo "{$row['Total_Guests']}"; ?></td>
                 <td><?php echo "{$row['Nights_Booked']}"; ?></td>
+				<td><?php echo "{$row['Special_Requests']}"; ?></td>
                 </tr>
 <?php
             }
