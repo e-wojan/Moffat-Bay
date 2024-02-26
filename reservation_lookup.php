@@ -11,6 +11,7 @@
 <?php
 session_start();
 include "connection.php";
+
 ?>
 
 <nav>
@@ -92,11 +93,7 @@ include "connection.php";
 
 <div class="bodyinformation">
     <h2 id="registrationheader">Reservation Lookup</h2>
-    <p>Please enter either your Confirmation Number or your Email Address to look up your reservation(s).</p><br/>
-    <div class="box"
-    <!--container-->
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <?php
+    <?php
         if (isset($_SESSION['SearchError'])) {
 
             ?>
@@ -104,10 +101,16 @@ include "connection.php";
                 <?php echo $_SESSION['SearchError']; ?>
             </div>
             <?php
-
             unset($_SESSION['SearchError']);
+            
         }
         ?>
+    <p>Please enter either your Confirmation Number or your Email Address to look up your reservation(s).</p><br/>
+    <div class="box">
+   
+    
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+       
         <label for="fname">Confirmation Number:</label><br>
         <input type="number" name="c_number"  class="registrationinput"><br><br>
 
@@ -131,14 +134,15 @@ $email = isset($_POST['email']) ? $_POST['email'] : '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = "SELECT * FROM reservationinformation WHERE Confirmation_Number = '$c_number' or Email = '$email'";
+   
     $result = mysqli_query($con, $query);
     if ($result) {
         if ($result && mysqli_num_rows($result) > 0) {
 ?>
-            <br><br><table class ="table-style">
+            <br><br><div class="tablediv"><table class ="table-style">
                 <thead>
                     <tr>
-                        <th>Reservation ID</th>
+                        <th>Confirmation Number</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
@@ -169,12 +173,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <?php
             }
 ?>
-            </tbody></table>
+            </tbody></table></div>
 <?php
-        } else {
+        } else{
+            
+            header("Location: reservation_lookup.php");
             $_SESSION['SearchError'] = "Sorry, there were no reservations found with that confirmation number or email. Please try again.";
-        }
+        }   
     }
+    
+  
 }
 ?>
 </div>

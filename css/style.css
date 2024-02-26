@@ -844,6 +844,13 @@ flex-basis: 25%;
   justify-content: center;
 }
 
+.tablediv{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .table-style {
   border-collapse: collapse;
   margin: 25px 0;
