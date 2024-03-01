@@ -1,3 +1,4 @@
+      <!--Photos taken from https://moffat-bay.org/local-attractions/-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
