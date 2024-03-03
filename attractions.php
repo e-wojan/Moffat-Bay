@@ -88,38 +88,109 @@
     <div class="container">
       <!--container-->
       <div class="attractionsbody">
-         <h2 id="registrationheader">Attractions</h2>
-        <div class="attractionsimages">
-          <img class="attractimage1" src="./images/pexels-snowboarding.jpg" />
-          <img class="attractimage2" src="./images/pexels-walker.jpg" />
+        <div class="attractioncontainer">
+          <h2 id="registrationheader">Attractions</h2>
+          <div class="attractionsimages">
+            <img class="attractimage1" src="./images/pexels-snowboarding.jpg" />
+            <img class="attractimage2" src="./images/pexels-walker.jpg" />
+          </div>
+
+
+          <br />
+          Situated on a stunning coastline, the lodge boasts breathtaking
+          panoramic views of turquoise waters, pristine sandy beaches, and lush
+          greenery. Nature enthusiasts can explore the lodge's surrounding areas
+          and discover hidden gems, such as scenic hiking trails, secluded coves,
+          and vibrant marine life. With its convenient location, Moffat Bay Lodge
+          offers many exciting activities.
+          <br />
+          <br />
+
+          Nature lovers will find themselves captivated by the untamed beauty of
+          the surrounding area. Visitors can embark on guided hiking tours through
+          the nearby rainforest, exploring hidden trails and encountering some of
+          the most unique wildlife.
+          <br />
+          <br />
+          For those in search of relaxation, Moffat Bay Lodge offers an array of
+          amenities to unwind and rejuvenate. The lodge boasts a magnificent
+          outdoor heated pool and spa facilities, providing the perfect setting to
+          unwind and soak in the natural beauty of the surroundings. Guests can
+          also indulge in a luxurious massage or spa treatment, designed to soothe
+          both the body and mind.
+          <br />
+          <br />
+          This is a breathtaking location!
         </div>
+        <br />
+        <br />
+        <div class="attractioncontainer">
+          <h2 id="registrationheader">Hiking</h2>
+          <div class="attractionsimages">
+            <img class="attractimage1" src="./images/hiking1.png" />
+            <img class="attractimage2" src="./images/hiking2.png" />
+          </div>
+          
 
+          <br />
+          Moffat Bay boasts a plethora of hiking trails fit for all walks of life.
+          On site we have map boards at the start of each trail to indicate difficulty 
+          level to ensure the adventure is best fit for you. We recently were able to 
+          develop two accessability trails made of hybrid concrete sidewalk and board/plank 
+          bridge accesses to retain the natural feel. Hand maps are available at the front 
+          office.
+        </div>
+        <br />
+        <br />
+        <div class="attractioncontainer">
+          <h2 id="registrationheader">Kayaking</h2>
+          <div class="attractionsimages">
+            <img class="attractimage1" src="./images/kayaking1.png" />
+            <img class="attractimage2" src="./images/kayaking2.png" />
+          </div>
+          
 
+          <br />
+          Come enjoy the fresh spring waters of our local rivers. Our lodge has worked with the 
+          state for years to ensure our water sources are kept clean and natural through preservation 
+          and strict run off rules from surrounding areas. We currently have three kayaking routes on site 
+          ranging from beginner, intermediate, and experienced. Whether you're searching for lazy river vibes 
+          or getting a good work out while enjoying the sights, we can accommodate you.
+        </div>
         <br />
-        Situated on a stunning coastline, the lodge boasts breathtaking
-        panoramic views of turquoise waters, pristine sandy beaches, and lush
-        greenery. Nature enthusiasts can explore the lodge's surrounding areas
-        and discover hidden gems, such as scenic hiking trails, secluded coves,
-        and vibrant marine life. With its convenient location, Moffat Bay Lodge
-        offers many exciting activities.
         <br />
-        <br />
+        <div class="attractioncontainer">
+          <h2 id="registrationheader">Whale Watching</h2>
+          <div class="attractionsimages">
+            <img class="attractimage1" src="./images/whales1.png" />
+            <img class="attractimage2" src="./images/whales2.png" />
+          </div>
+          
 
-        Nature lovers will find themselves captivated by the untamed beauty of
-        the surrounding area. Visitors can embark on guided hiking tours through
-        the nearby rainforest, exploring hidden trails and encountering some of
-        the most unique wildlife.
+          <br />
+          The wildlife of Moffat Bay is second to none. From the local species in our surrounding forests or the 
+          critters in our diverse ocean front, it can all be seen. Our whales in particular love seeing our guests. 
+          So much so that we have a dedicated service to take you out to say hello to the friendly giants. Every 
+          Tuesday and Thursday we offer boat rides on the ocean front for two hours to give plenty of time for you 
+          and your new whale pals to get to know each other. More information can be found at the front office.
+        </div>
         <br />
         <br />
-        For those in search of relaxation, Moffat Bay Lodge offers an array of
-        amenities to unwind and rejuvenate. The lodge boasts a magnificent
-        outdoor heated pool and spa facilities, providing the perfect setting to
-        unwind and soak in the natural beauty of the surroundings. Guests can
-        also indulge in a luxurious massage or spa treatment, designed to soothe
-        both the body and mind.
-        <br />
-        <br />
-        This is a breathtaking location!
+        <div class="attractioncontainer">
+          <h2 id="registrationheader">Scuba Diving</h2>
+          <div class="attractionsimages">
+            <img class="attractimage1" src="./images/scuba1.png" />
+            <img class="attractimage2" src="./images/scuba2.png" />
+          </div>
+          
+
+          <br />
+          Whale watching wasn't enough and still want some ocean fun? Did you know we have one of the most diverse 
+          coral reefs in the nation? We work hard to keep that ranking so our local wildlife can live happy and so 
+          you can come see them thrive. We offer daily scuba tours to visit our reefs in all of their beauty. The trip 
+          presides the whole coastline of Moffat to ensure you get the biggest bang for your buck. No equipment required 
+          as we provide all scuba gear on site and have dedicated boats for the trip.
+        </div>
       </div>
     </div>
     <!--container-->

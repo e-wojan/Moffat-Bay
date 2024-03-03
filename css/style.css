@@ -169,8 +169,8 @@ margin-bottom: 85px;
 
 }
 .attractionsimages{
-float: right;
-display:grid;
+display: flex;
+justify-content:space-between;
 
 }
 .attractimage1{
@@ -217,6 +217,19 @@ margin: 15px 15px;
 
 
 .container{
+display: grid;
+column-gap: 25px;
+padding-top: 25px;
+padding-right: 5%;
+padding-left: 5%;
+width: 100%;
+margin-right: auto;
+margin-left: auto;
+
+}
+
+
+.attractioncontainer{
 display: grid;
 column-gap: 25px;
 padding-top: 25px;
