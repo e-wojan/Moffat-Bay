@@ -115,14 +115,13 @@ text-shadow: 4px 4px 8px #727171;
 text-decoration: none;
 }
 .bannerimg{/*banner image under navigation*/
-height: 300px;
-background-size: 100vw !important;
+/* height: 300px; */
+background-size: 100vw 50vh !important;
 padding-top: 100px;
 
 
 background-image:url('../images/lodgesceneviewheaderbanner.jpg') ;
 background-repeat: no-repeat;
-background-size: auto;
 
 
 }
