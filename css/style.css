@@ -124,6 +124,7 @@ background-image:url('../images/lodgesceneviewheaderbanner.jpg') ;
 background-repeat: no-repeat;
 
 
+
 }
 .bannerimg p{
 font-size: 100px;
@@ -901,3 +902,44 @@ flex-basis: 25%;
   color: #466a72;
 }
 
+.attractionscontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  /* justify-content: center;
+  align-content: center; */
+}
+
+.itemcontainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  margin-bottom: 5rem;
+}
+
+.imagecontainer{
+  flex-basis: 5%;
+  display: flex;
+  align-content: baseline;
+  align-items: center;
+}
+
+.textcontainer{
+  flex-basis: 45%;
+  display: flex;
+  align-items: center;
+  align-content: baseline;
+}
+
+.headercontainer{
+  flex-basis: 100%;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.attractimage2{
+ height: 100%;
+}
