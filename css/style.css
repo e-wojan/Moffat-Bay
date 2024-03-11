@@ -444,10 +444,23 @@ border-radius: 0.5rem;
 }
 
 .username{
-position: absolute;
+position: relative;
+text-align: center;
 color: white;
-right: 5px;
-top: 15px;
+float: right;
+min-width: 200px;
+display: inline-block;
+height: 100%;
+padding-top: 1rem;
+padding-bottom: auto;
+}
+
+.username div{
+  height: 100%;
+  text-align: center;
+  position: flex;
+justify-content: center;
+align-items: center;
 }
 
 img{
@@ -557,10 +570,14 @@ padding-bottom: 1rem;
 
 #logout{
 
-position: absolute;
-right: 215px;
-top: 1px;
+position: relative;
+float: right;
+min-width: 50px;
+display: inline-block;
 }
+
+
+
 
 #logoutlink{
 text-decoration: underline;

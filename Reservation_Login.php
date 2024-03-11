@@ -55,29 +55,13 @@
             ?>
 
 
-            <!-- <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div> -->
-            <div class="username">
-                <?php
-                if (isset($_SESSION['Email'])) {
-
-                    ?>
-                    <div class="" role="">Hello,
-                        <?php echo $_SESSION['Email'] . "!"; ?>
-                    </div>
-                    <?php
-                }
-                ?>
-            </div>
-
-            <div class="username">
+<div class="username">
             <?php
             if (isset($_SESSION['Email'])) {
 
-            ?>
-            <div class="" role="">Hello, 
-                <?php echo $_SESSION['Email']."!"; ?>
-            </div>
-            <?php
+            echo "Hello, " . $_SESSION['Email']."!"; 
+            
+            
             }
             ?>
             </div>

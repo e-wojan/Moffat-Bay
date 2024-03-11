@@ -45,39 +45,28 @@
             if (isset($_SESSION['Email'])) {
 
                 ?>
+                
                 <div id="logout"><a href="Logout.php" id="logoutlink">Logout</a></div>
                 <?php
             } else {
                 ?>
                 <div class="navitemlogin"><a href="Login_Page.php">Login</a></div>
+                
                 <?php
             }
             ?>
 
 
-            <!-- <div class="navitemlogin"><a href="./login.html" class="active">Login</a></div> -->
-            <div class="username">
-                <?php
-                if (isset($_SESSION['Email'])) {
-
-                    ?>
-                    <div class="" role="">Hello,
-                        <?php echo $_SESSION['Email'] . "!"; ?>
-                    </div>
-                    <?php
-                }
-                ?>
-            </div>
+        
+            
 
             <div class="username">
             <?php
             if (isset($_SESSION['Email'])) {
 
-            ?>
-            <div class="" role="">Hello, 
-                <?php echo $_SESSION['Email']."!"; ?>
-            </div>
-            <?php
+            echo "Hello, " . $_SESSION['Email']."!"; 
+            
+            
             }
             ?>
             </div>
@@ -94,7 +83,10 @@
         <div class="centeredtextlanding">Welcome! Your adventure starts here.
             <br>
             Start exploring for your next adventure.
+            
             <a href="./about.php">Start Here</a>
+            
+           
 
         </div>
     </div>
