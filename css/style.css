@@ -106,13 +106,18 @@ text-shadow: 4px 4px 8px #727171;
   color: white;
   font-size: 36px;
   font-weight: bold;
+  line-height: 3rem;
+  
 }
+
+
 .centeredtextlanding a { /*"Start Here" landing page style */
   background-color: white;
   color: black;
   border-radius: 40px;
   text-shadow: 4px 4px 8px #727171;
 text-decoration: none;
+padding: 0.4rem 1.5rem;
 }
 .bannerimg{/*banner image under navigation*/
 /* height: 300px; */
