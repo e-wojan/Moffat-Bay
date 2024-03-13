@@ -495,9 +495,11 @@
 
 </body>
 <div class="footer">
-  <p>This website was created as a class assignment</p>
-  <p>CSD460 Capstone in Software Development Project - Group B</p>
-  <p>Bellevue University</p>
+    <p>This website was created as a class assignment
+        <br>
+        CSD460 Capstone in Software Development Project - Group B
+        <br>
+        Bellevue University</p>
 
 </div>
 </body>

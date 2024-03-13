@@ -114,7 +114,11 @@
 
         <!--Bottom of Screen Color-->
         <div class="footer">
-
+            <p>This website was created as a class assignment
+                <br>
+                CSD460 Capstone in Software Development Project - Group B
+                <br>
+                Bellevue University</p>
         </div>
 </body>
 
